@@ -169,9 +169,7 @@ namespace doan_ver1._0
                     return;
                 }
 
-                // Chuyển đổi đơn giá và số lượng từ string sang số để tính toán
-                //decimal donGia = Convert.ToDecimal(txtDonGia.Text);
-                //int soLuong = Convert.ToInt32(txtSoLuong.Text);
+               
 
                 // Tính thành tiền
                 double thanhTien = double.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
@@ -216,6 +214,7 @@ namespace doan_ver1._0
                 connect.Close();
             }
             dataGV_sanPham.DataSource = loaddl_SanPham();
+            data_GV_timKiem.DataSource = loaddl_SanPham();
         }
 
         private void dataGV_sanPham_Click(object sender, EventArgs e)

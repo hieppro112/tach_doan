@@ -441,5 +441,15 @@ namespace doan_ver1._0
            
             MessageBox.Show("Dữ liệu đã được làm mới!");
         }
+
+        private void data_GV_timKiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGV_sanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -522,6 +522,8 @@
             this.dataGV_sanPham.RowTemplate.Height = 24;
             this.dataGV_sanPham.Size = new System.Drawing.Size(866, 237);
             this.dataGV_sanPham.TabIndex = 18;
+            this.dataGV_sanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_sanPham_CellContentClick);
+            this.dataGV_sanPham.Click += new System.EventHandler(this.dataGV_sanPham_Click);
             // 
             // tabPage2
             // 
@@ -564,6 +566,8 @@
             this.data_GV_timKiem.RowTemplate.Height = 24;
             this.data_GV_timKiem.Size = new System.Drawing.Size(866, 246);
             this.data_GV_timKiem.TabIndex = 8;
+            this.data_GV_timKiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_GV_timKiem_CellContentClick);
+            this.data_GV_timKiem.Click += new System.EventHandler(this.dataGV_sanPham_Click);
             // 
             // btn_TK_timKiem
             // 

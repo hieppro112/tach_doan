@@ -657,10 +657,10 @@
             this.Controls.Add(this.app_SanPham);
             this.Controls.Add(this.app_cuahang);
             this.Controls.Add(this.app_account);
-            this.Controls.Add(this.pannel_cuahang);
-            this.Controls.Add(this.panel_banner);
             this.Controls.Add(this.panel_sanPham);
             this.Controls.Add(this.panel_account);
+            this.Controls.Add(this.pannel_cuahang);
+            this.Controls.Add(this.panel_banner);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home_giaodien";

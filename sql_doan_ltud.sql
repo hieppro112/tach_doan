@@ -225,5 +225,40 @@ end;
 	('Cửa Hàng MediaMart', '101 Đường Phạm Hùng, Hà Nội', '0923456789'),
 	('Cửa Hàng Pico', '303 Đường Nguyễn Trãi, Hà Nội', '0934567890');
 
+	-- sql hóa đơn xuất
+
+	ALTER TABLE SanPham
+ADD CONSTRAINT UQ_MaSanPham UNIQUE (MaSanPham);
+
+	CREATE TABLE HDXuatHang (
+    MaHoaDon NVARCHAR(50) PRIMARY KEY,           -- Mã hóa đơn, người dùng nhập
+    MaSanPham NVARCHAR(50) NOT NULL,             -- Mã sản phẩm xuất bán
+    MaCuaHang INT NOT NULL,                      -- Mã cửa hàng xuất hàng
+    MaNhanVien INT NOT NULL,                     -- Mã nhân viên xuất hàng
+    SoLuong INT NOT NULL,                        -- Số lượng sản phẩm xuất bán
+    NgayXuat DATETIME DEFAULT GETDATE(),        -- Ngày xuất hàng
+    FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham),  -- Liên kết với bảng SanPham
+    FOREIGN KEY (MaCuaHang) REFERENCES CuaHang(MaCuaHang),  -- Liên kết với bảng CuaHang
+    FOREIGN KEY (MaNhanVien) REFERENCES TaiKhoan(MaTaiKhoan) -- Liên kết với bảng TaiKhoan
+	);
+
+
+
+	create proc them_HDxuat(@mahd nvarchar(50) , @masp nvarchar(50), @mach int , @manv int, @soluong int ,@ngayxuat datetime)
+	as
+	insert into HDXuatHang values (@mahd,@masp,@mach,@manv,@soluong,@ngayxuat)
+
+	create proc xoa_HDxuat(@mahd nvarchar(50))
+	as
+	delete HDXuatHang
+	where MaHoaDon = @mahd
+
+	exec xoa_HDxuat 'hd1'
+
+	exec them_HDxuat 'hd1','SP001','1','4','12','2/5/2024'
+
+	select * from HDXuatHang
+
+
 
 

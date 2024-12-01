@@ -16,8 +16,8 @@ namespace doan_ver1._0
         public home_giaodien(string vaitro)
         {
             InitializeComponent();
-            panel_account.Hide();
-            panel_sanPham.Hide();
+            panel_HDxuat.Hide();
+            panel_HD.Hide();
             pannel_cuahang.Hide();
             quyen_admin(vaitro);
         }
@@ -122,8 +122,8 @@ namespace doan_ver1._0
         {
             panel_banner.Hide();
             pannel_cuahang.Hide();
-            panel_sanPham.Hide();
-            panel_account.Show();
+            panel_HD.Hide();
+            panel_HDxuat.Show();
         }
 
 
@@ -158,8 +158,8 @@ namespace doan_ver1._0
         {
             pannel_cuahang.Hide();
             panel_banner.Hide();
-            panel_account.Hide();
-            panel_sanPham.Show();
+            panel_HDxuat.Hide();
+            panel_HD.Show();
         }
 
         private void btnThem_Sp_Click(object sender, EventArgs e)
@@ -449,9 +449,14 @@ namespace doan_ver1._0
         private void app_cuahang_Click(object sender, EventArgs e)
         {
             panel_banner.Hide();
-            panel_account.Hide();
-            panel_sanPham.Hide();
+            panel_HDxuat.Hide();
+            panel_HD.Hide();
             pannel_cuahang.Show();
+        }
+
+        private void panel_account_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

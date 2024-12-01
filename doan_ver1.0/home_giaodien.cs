@@ -18,6 +18,7 @@ namespace doan_ver1._0
             InitializeComponent();
             panel_account.Hide();
             panel_sanPham.Hide();
+            pannel_cuahang.Hide();
             quyen_admin(vaitro);
         }
         //tim kiếm danh sách 
@@ -95,6 +96,7 @@ namespace doan_ver1._0
             dataGV_sanPham.DefaultCellStyle.ForeColor = Color.Black;
             data_GV_timKiem.DataSource = loaddl_SanPham();
             data_GV_timKiem.DefaultCellStyle.ForeColor = Color.Black;
+
             
         }
         private void table_info_accout_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -119,6 +121,7 @@ namespace doan_ver1._0
         private void app_account_Click(object sender, EventArgs e)
         {
             panel_banner.Hide();
+            pannel_cuahang.Hide();
             panel_sanPham.Hide();
             panel_account.Show();
         }
@@ -153,6 +156,7 @@ namespace doan_ver1._0
 
         private void app_SanPham_Click(object sender, EventArgs e)
         {
+            pannel_cuahang.Hide();
             panel_banner.Hide();
             panel_account.Hide();
             panel_sanPham.Show();
@@ -169,9 +173,7 @@ namespace doan_ver1._0
                     return;
                 }
 
-                // Chuyển đổi đơn giá và số lượng từ string sang số để tính toán
-                //decimal donGia = Convert.ToDecimal(txtDonGia.Text);
-                //int soLuong = Convert.ToInt32(txtSoLuong.Text);
+               
 
                 // Tính thành tiền
                 double thanhTien = double.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
@@ -216,6 +218,7 @@ namespace doan_ver1._0
                 connect.Close();
             }
             dataGV_sanPham.DataSource = loaddl_SanPham();
+            data_GV_timKiem.DataSource = loaddl_SanPham();
         }
 
         private void dataGV_sanPham_Click(object sender, EventArgs e)
@@ -441,6 +444,14 @@ namespace doan_ver1._0
 
            
             MessageBox.Show("Dữ liệu đã được làm mới!");
+        }
+
+        private void app_cuahang_Click(object sender, EventArgs e)
+        {
+            panel_banner.Hide();
+            panel_account.Hide();
+            panel_sanPham.Hide();
+            pannel_cuahang.Show();
         }
     }
 }

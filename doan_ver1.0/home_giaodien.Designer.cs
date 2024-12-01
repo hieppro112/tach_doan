@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-
             this.panel_banner = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.app_account = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pic_account = new System.Windows.Forms.PictureBox();
+            this.txt_account = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.app_cuahang = new System.Windows.Forms.Panel();
+            this.pic_cuahang = new System.Windows.Forms.PictureBox();
+            this.txt_cuahang = new System.Windows.Forms.Label();
             this.app_SanPham = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pic_sanpham = new System.Windows.Forms.PictureBox();
+            this.txt_sanpham = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -82,12 +79,13 @@
             this.txt_seach = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
+            this.pannel_cuahang = new System.Windows.Forms.Panel();
             this.app_account.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_account)).BeginInit();
+            this.app_cuahang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_cuahang)).BeginInit();
             this.app_SanPham.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_sanpham)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel6.SuspendLayout();
@@ -116,8 +114,8 @@
             // app_account
             // 
             this.app_account.BackColor = System.Drawing.Color.RosyBrown;
-            this.app_account.Controls.Add(this.pictureBox1);
-            this.app_account.Controls.Add(this.label1);
+            this.app_account.Controls.Add(this.pic_account);
+            this.app_account.Controls.Add(this.txt_account);
             this.app_account.Location = new System.Drawing.Point(12, 60);
             this.app_account.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.app_account.Name = "app_account";
@@ -125,28 +123,28 @@
             this.app_account.TabIndex = 1;
             this.app_account.Click += new System.EventHandler(this.app_account_Click);
             // 
-            // pictureBox1
+            // pic_account
             // 
-            this.pictureBox1.Image = global::doan_ver1._0.Properties.Resources.profile;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.app_account_Click);
+            this.pic_account.Image = global::doan_ver1._0.Properties.Resources.profile;
+            this.pic_account.Location = new System.Drawing.Point(0, 2);
+            this.pic_account.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_account.Name = "pic_account";
+            this.pic_account.Size = new System.Drawing.Size(72, 50);
+            this.pic_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_account.TabIndex = 1;
+            this.pic_account.TabStop = false;
+            this.pic_account.Click += new System.EventHandler(this.app_account_Click);
             // 
-            // label1
+            // txt_account
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý tài khoản";
-            this.label1.Click += new System.EventHandler(this.app_account_Click);
+            this.txt_account.AutoSize = true;
+            this.txt_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_account.Location = new System.Drawing.Point(69, 23);
+            this.txt_account.Name = "txt_account";
+            this.txt_account.Size = new System.Drawing.Size(155, 20);
+            this.txt_account.TabIndex = 0;
+            this.txt_account.Text = "Quản lý tài khoản";
+            this.txt_account.Click += new System.EventHandler(this.app_account_Click);
             // 
             // imageList1
             // 
@@ -154,43 +152,43 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // panel3
+            // app_cuahang
             // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(12, 143);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(293, 62);
-            this.panel3.TabIndex = 2;
+            this.app_cuahang.BackColor = System.Drawing.Color.Silver;
+            this.app_cuahang.Controls.Add(this.pic_cuahang);
+            this.app_cuahang.Controls.Add(this.txt_cuahang);
+            this.app_cuahang.Location = new System.Drawing.Point(12, 143);
+            this.app_cuahang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.app_cuahang.Name = "app_cuahang";
+            this.app_cuahang.Size = new System.Drawing.Size(293, 62);
+            this.app_cuahang.TabIndex = 2;
             // 
-            // pictureBox2
+            // pic_cuahang
             // 
-            this.pictureBox2.Image = global::doan_ver1._0.Properties.Resources.profile;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pic_cuahang.Image = global::doan_ver1._0.Properties.Resources.profile;
+            this.pic_cuahang.Location = new System.Drawing.Point(0, 2);
+            this.pic_cuahang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_cuahang.Name = "pic_cuahang";
+            this.pic_cuahang.Size = new System.Drawing.Size(72, 50);
+            this.pic_cuahang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_cuahang.TabIndex = 1;
+            this.pic_cuahang.TabStop = false;
             // 
-            // label2
+            // txt_cuahang
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Danh sách cửa hàng";
+            this.txt_cuahang.AutoSize = true;
+            this.txt_cuahang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cuahang.Location = new System.Drawing.Point(69, 23);
+            this.txt_cuahang.Name = "txt_cuahang";
+            this.txt_cuahang.Size = new System.Drawing.Size(181, 20);
+            this.txt_cuahang.TabIndex = 0;
+            this.txt_cuahang.Text = "Danh sách cửa hàng";
             // 
             // app_SanPham
             // 
             this.app_SanPham.BackColor = System.Drawing.Color.RosyBrown;
-            this.app_SanPham.Controls.Add(this.pictureBox3);
-            this.app_SanPham.Controls.Add(this.label3);
+            this.app_SanPham.Controls.Add(this.pic_sanpham);
+            this.app_SanPham.Controls.Add(this.txt_sanpham);
             this.app_SanPham.Location = new System.Drawing.Point(12, 222);
             this.app_SanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.app_SanPham.Name = "app_SanPham";
@@ -198,27 +196,27 @@
             this.app_SanPham.TabIndex = 2;
             this.app_SanPham.Click += new System.EventHandler(this.app_SanPham_Click);
             // 
-            // pictureBox3
+            // pic_sanpham
             // 
-            this.pictureBox3.Image = global::doan_ver1._0.Properties.Resources.feature;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.pic_sanpham.Image = global::doan_ver1._0.Properties.Resources.feature;
+            this.pic_sanpham.Location = new System.Drawing.Point(0, 2);
+            this.pic_sanpham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_sanpham.Name = "pic_sanpham";
+            this.pic_sanpham.Size = new System.Drawing.Size(72, 50);
+            this.pic_sanpham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_sanpham.TabIndex = 1;
+            this.pic_sanpham.TabStop = false;
             // 
-            // label3
+            // txt_sanpham
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Danh Sách Sản Phẩm\r\n";
-            this.label3.Click += new System.EventHandler(this.app_SanPham_Click);
+            this.txt_sanpham.AutoSize = true;
+            this.txt_sanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sanpham.Location = new System.Drawing.Point(69, 23);
+            this.txt_sanpham.Name = "txt_sanpham";
+            this.txt_sanpham.Size = new System.Drawing.Size(192, 20);
+            this.txt_sanpham.TabIndex = 0;
+            this.txt_sanpham.Text = "Danh Sách Sản Phẩm\r\n";
+            this.txt_sanpham.Click += new System.EventHandler(this.app_SanPham_Click);
             // 
             // panel5
             // 
@@ -533,7 +531,6 @@
             // table_info_accout
             // 
             this.table_info_accout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
             this.table_info_accout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.table_info_accout.Location = new System.Drawing.Point(0, 281);
             this.table_info_accout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -640,6 +637,14 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "helloo";
             // 
+            // pannel_cuahang
+            // 
+            this.pannel_cuahang.BackColor = System.Drawing.Color.Red;
+            this.pannel_cuahang.Location = new System.Drawing.Point(331, 59);
+            this.pannel_cuahang.Name = "pannel_cuahang";
+            this.pannel_cuahang.Size = new System.Drawing.Size(883, 483);
+            this.pannel_cuahang.TabIndex = 8;
+            // 
             // home_giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -650,11 +655,12 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.app_SanPham);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.app_cuahang);
             this.Controls.Add(this.app_account);
+            this.Controls.Add(this.pannel_cuahang);
+            this.Controls.Add(this.panel_banner);
             this.Controls.Add(this.panel_sanPham);
             this.Controls.Add(this.panel_account);
-            this.Controls.Add(this.panel_banner);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home_giaodien";
@@ -663,13 +669,13 @@
             this.Load += new System.EventHandler(this.home_giaodien_Load);
             this.app_account.ResumeLayout(false);
             this.app_account.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_account)).EndInit();
+            this.app_cuahang.ResumeLayout(false);
+            this.app_cuahang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_cuahang)).EndInit();
             this.app_SanPham.ResumeLayout(false);
             this.app_SanPham.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_sanpham)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -699,15 +705,15 @@
         private System.Windows.Forms.Panel panel_banner;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel app_account;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt_account;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pic_account;
+        private System.Windows.Forms.Panel app_cuahang;
+        private System.Windows.Forms.PictureBox pic_cuahang;
+        private System.Windows.Forms.Label txt_cuahang;
         private System.Windows.Forms.Panel app_SanPham;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pic_sanpham;
+        private System.Windows.Forms.Label txt_sanpham;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
@@ -746,5 +752,6 @@
         private System.Windows.Forms.TextBox txt_seach;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel pannel_cuahang;
     }
 }

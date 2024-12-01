@@ -262,6 +262,8 @@ ADD CONSTRAINT UQ_MaSanPham UNIQUE (MaSanPham);
 	exec them_HDxuat 'hd1','SP001','1','4','12','2/5/2024'
 	select * from HDXuatHang
 
+	
+
 
 
 

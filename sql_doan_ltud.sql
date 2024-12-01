@@ -253,10 +253,13 @@ ADD CONSTRAINT UQ_MaSanPham UNIQUE (MaSanPham);
 	delete HDXuatHang
 	where MaHoaDon = @mahd
 
+	create proc xem_HDxuat
+	as
+	select *
+	from HDXuatHang
+
 	exec xoa_HDxuat 'hd1'
-
 	exec them_HDxuat 'hd1','SP001','1','4','12','2/5/2024'
-
 	select * from HDXuatHang
 
 

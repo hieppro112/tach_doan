@@ -80,6 +80,15 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.pannel_cuahang = new System.Windows.Forms.Panel();
+            this.rad_TK_Ma = new System.Windows.Forms.RadioButton();
+            this.rad_TK_Ten = new System.Windows.Forms.RadioButton();
+            this.rad_TK_DanhMuc = new System.Windows.Forms.RadioButton();
+            this.txt_TK_MaSP = new System.Windows.Forms.TextBox();
+            this.txt_TK_Ten = new System.Windows.Forms.TextBox();
+            this.cmb_TK_DanhMuc = new System.Windows.Forms.ComboBox();
+            this.btn_TK_timKiem = new System.Windows.Forms.Button();
+            this.data_GV_timKiem = new System.Windows.Forms.DataGridView();
+            this.btn_TK_LamMoi = new System.Windows.Forms.Button();
             this.app_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_account)).BeginInit();
             this.app_cuahang.SuspendLayout();
@@ -94,12 +103,14 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_sanPham)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_info_accout)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_GV_timKiem)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_banner
@@ -298,19 +309,20 @@
             this.panel_sanPham.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel_sanPham.Controls.Add(this.tabControl1);
             this.panel_sanPham.ForeColor = System.Drawing.Color.White;
-            this.panel_sanPham.Location = new System.Drawing.Point(331, 62);
+            this.panel_sanPham.Location = new System.Drawing.Point(331, 59);
             this.panel_sanPham.Name = "panel_sanPham";
-            this.panel_sanPham.Size = new System.Drawing.Size(876, 430);
+            this.panel_sanPham.Size = new System.Drawing.Size(883, 483);
             this.panel_sanPham.TabIndex = 7;
+            this.panel_sanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_sanPham_Paint);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 23);
+            this.tabControl1.Location = new System.Drawing.Point(3, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(880, 459);
+            this.tabControl1.Size = new System.Drawing.Size(880, 476);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -335,9 +347,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(872, 430);
+            this.tabPage1.Size = new System.Drawing.Size(872, 447);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Quản Lý Sản Phẩm";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // cbDanhMuc_Sp
@@ -408,6 +420,7 @@
             this.btnLamMoi_Sp.TabIndex = 31;
             this.btnLamMoi_Sp.Text = "Làm Mới";
             this.btnLamMoi_Sp.UseVisualStyleBackColor = false;
+            this.btnLamMoi_Sp.Click += new System.EventHandler(this.btnLamMoi_Sp_Click_1);
             // 
             // btnSua_Sp
             // 
@@ -419,6 +432,7 @@
             this.btnSua_Sp.TabIndex = 30;
             this.btnSua_Sp.Text = "Cập Nhật";
             this.btnSua_Sp.UseVisualStyleBackColor = false;
+            this.btnSua_Sp.Click += new System.EventHandler(this.btnSua_Sp_Click);
             // 
             // btnXoa_Sp
             // 
@@ -430,6 +444,7 @@
             this.btnXoa_Sp.TabIndex = 29;
             this.btnXoa_Sp.Text = "Xóa";
             this.btnXoa_Sp.UseVisualStyleBackColor = false;
+            this.btnXoa_Sp.Click += new System.EventHandler(this.btnXoa_Sp_Click);
             // 
             // btnThem_Sp
             // 
@@ -442,6 +457,7 @@
             this.btnThem_Sp.TabIndex = 28;
             this.btnThem_Sp.Text = "Thêm";
             this.btnThem_Sp.UseVisualStyleBackColor = false;
+            this.btnThem_Sp.Click += new System.EventHandler(this.btnThem_Sp_Click);
             // 
             // label12
             // 
@@ -500,21 +516,30 @@
             // 
             this.dataGV_sanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGV_sanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGV_sanPham.Location = new System.Drawing.Point(3, 212);
+            this.dataGV_sanPham.Location = new System.Drawing.Point(3, 207);
             this.dataGV_sanPham.Name = "dataGV_sanPham";
             this.dataGV_sanPham.RowHeadersWidth = 51;
             this.dataGV_sanPham.RowTemplate.Height = 24;
-            this.dataGV_sanPham.Size = new System.Drawing.Size(866, 215);
+            this.dataGV_sanPham.Size = new System.Drawing.Size(866, 237);
             this.dataGV_sanPham.TabIndex = 18;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btn_TK_LamMoi);
+            this.tabPage2.Controls.Add(this.data_GV_timKiem);
+            this.tabPage2.Controls.Add(this.btn_TK_timKiem);
+            this.tabPage2.Controls.Add(this.cmb_TK_DanhMuc);
+            this.tabPage2.Controls.Add(this.txt_TK_Ten);
+            this.tabPage2.Controls.Add(this.txt_TK_MaSP);
+            this.tabPage2.Controls.Add(this.rad_TK_DanhMuc);
+            this.tabPage2.Controls.Add(this.rad_TK_Ten);
+            this.tabPage2.Controls.Add(this.rad_TK_Ma);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(872, 430);
+            this.tabPage2.Size = new System.Drawing.Size(872, 447);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Tìm Kiếm Sản Phẩm";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel_account
@@ -645,6 +670,106 @@
             this.pannel_cuahang.Size = new System.Drawing.Size(883, 483);
             this.pannel_cuahang.TabIndex = 8;
             // 
+            // rad_TK_Ma
+            // 
+            this.rad_TK_Ma.AutoSize = true;
+            this.rad_TK_Ma.ForeColor = System.Drawing.Color.Black;
+            this.rad_TK_Ma.Location = new System.Drawing.Point(27, 17);
+            this.rad_TK_Ma.Name = "rad_TK_Ma";
+            this.rad_TK_Ma.Size = new System.Drawing.Size(196, 20);
+            this.rad_TK_Ma.TabIndex = 0;
+            this.rad_TK_Ma.TabStop = true;
+            this.rad_TK_Ma.Text = "Tìm kiếm theo mã sản phẩm";
+            this.rad_TK_Ma.UseVisualStyleBackColor = true;
+            this.rad_TK_Ma.CheckedChanged += new System.EventHandler(this.rad_TK_Ma_CheckedChanged);
+            // 
+            // rad_TK_Ten
+            // 
+            this.rad_TK_Ten.AutoSize = true;
+            this.rad_TK_Ten.ForeColor = System.Drawing.Color.Black;
+            this.rad_TK_Ten.Location = new System.Drawing.Point(27, 62);
+            this.rad_TK_Ten.Name = "rad_TK_Ten";
+            this.rad_TK_Ten.Size = new System.Drawing.Size(195, 20);
+            this.rad_TK_Ten.TabIndex = 1;
+            this.rad_TK_Ten.TabStop = true;
+            this.rad_TK_Ten.Text = "Tìm kiếm theo tên sản phẩm";
+            this.rad_TK_Ten.UseVisualStyleBackColor = true;
+            this.rad_TK_Ten.CheckedChanged += new System.EventHandler(this.rad_TK_Ten_CheckedChanged);
+            // 
+            // rad_TK_DanhMuc
+            // 
+            this.rad_TK_DanhMuc.AutoSize = true;
+            this.rad_TK_DanhMuc.ForeColor = System.Drawing.Color.Black;
+            this.rad_TK_DanhMuc.Location = new System.Drawing.Point(27, 110);
+            this.rad_TK_DanhMuc.Name = "rad_TK_DanhMuc";
+            this.rad_TK_DanhMuc.Size = new System.Drawing.Size(173, 20);
+            this.rad_TK_DanhMuc.TabIndex = 2;
+            this.rad_TK_DanhMuc.TabStop = true;
+            this.rad_TK_DanhMuc.Text = "Tìm kiếm theo danh mục";
+            this.rad_TK_DanhMuc.UseVisualStyleBackColor = true;
+            this.rad_TK_DanhMuc.CheckedChanged += new System.EventHandler(this.rad_TK_DanhMuc_CheckedChanged);
+            // 
+            // txt_TK_MaSP
+            // 
+            this.txt_TK_MaSP.Location = new System.Drawing.Point(246, 14);
+            this.txt_TK_MaSP.Name = "txt_TK_MaSP";
+            this.txt_TK_MaSP.Size = new System.Drawing.Size(281, 22);
+            this.txt_TK_MaSP.TabIndex = 3;
+            // 
+            // txt_TK_Ten
+            // 
+            this.txt_TK_Ten.Location = new System.Drawing.Point(246, 59);
+            this.txt_TK_Ten.Name = "txt_TK_Ten";
+            this.txt_TK_Ten.Size = new System.Drawing.Size(281, 22);
+            this.txt_TK_Ten.TabIndex = 4;
+            // 
+            // cmb_TK_DanhMuc
+            // 
+            this.cmb_TK_DanhMuc.FormattingEnabled = true;
+            this.cmb_TK_DanhMuc.Items.AddRange(new object[] {
+            "Điện Lạnh",
+            "Điện Tử",
+            "Gia Dụng"});
+            this.cmb_TK_DanhMuc.Location = new System.Drawing.Point(246, 106);
+            this.cmb_TK_DanhMuc.Name = "cmb_TK_DanhMuc";
+            this.cmb_TK_DanhMuc.Size = new System.Drawing.Size(281, 24);
+            this.cmb_TK_DanhMuc.TabIndex = 5;
+            // 
+            // btn_TK_timKiem
+            // 
+            this.btn_TK_timKiem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_TK_timKiem.ForeColor = System.Drawing.Color.Black;
+            this.btn_TK_timKiem.Location = new System.Drawing.Point(27, 148);
+            this.btn_TK_timKiem.Name = "btn_TK_timKiem";
+            this.btn_TK_timKiem.Size = new System.Drawing.Size(173, 44);
+            this.btn_TK_timKiem.TabIndex = 6;
+            this.btn_TK_timKiem.Text = "Tìm Kiếm";
+            this.btn_TK_timKiem.UseVisualStyleBackColor = false;
+            this.btn_TK_timKiem.Click += new System.EventHandler(this.btn_TK_timKiem_Click);
+            // 
+            // data_GV_timKiem
+            // 
+            this.data_GV_timKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_GV_timKiem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.data_GV_timKiem.Location = new System.Drawing.Point(3, 198);
+            this.data_GV_timKiem.Name = "data_GV_timKiem";
+            this.data_GV_timKiem.RowHeadersWidth = 51;
+            this.data_GV_timKiem.RowTemplate.Height = 24;
+            this.data_GV_timKiem.Size = new System.Drawing.Size(866, 246);
+            this.data_GV_timKiem.TabIndex = 8;
+            // 
+            // btn_TK_LamMoi
+            // 
+            this.btn_TK_LamMoi.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_TK_LamMoi.ForeColor = System.Drawing.Color.Black;
+            this.btn_TK_LamMoi.Location = new System.Drawing.Point(246, 148);
+            this.btn_TK_LamMoi.Name = "btn_TK_LamMoi";
+            this.btn_TK_LamMoi.Size = new System.Drawing.Size(173, 44);
+            this.btn_TK_LamMoi.TabIndex = 9;
+            this.btn_TK_LamMoi.Text = "Làm mới";
+            this.btn_TK_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_TK_LamMoi.Click += new System.EventHandler(this.btn_TK_LamMoi_Click);
+            // 
             // home_giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -687,6 +812,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_sanPham)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.panel_account.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.table_info_accout)).EndInit();
             this.tabControl2.ResumeLayout(false);
@@ -695,6 +822,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_GV_timKiem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,5 +881,14 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pannel_cuahang;
+        private System.Windows.Forms.RadioButton rad_TK_DanhMuc;
+        private System.Windows.Forms.RadioButton rad_TK_Ten;
+        private System.Windows.Forms.RadioButton rad_TK_Ma;
+        private System.Windows.Forms.ComboBox cmb_TK_DanhMuc;
+        private System.Windows.Forms.TextBox txt_TK_Ten;
+        private System.Windows.Forms.TextBox txt_TK_MaSP;
+        private System.Windows.Forms.DataGridView data_GV_timKiem;
+        private System.Windows.Forms.Button btn_TK_timKiem;
+        private System.Windows.Forms.Button btn_TK_LamMoi;
     }
 }

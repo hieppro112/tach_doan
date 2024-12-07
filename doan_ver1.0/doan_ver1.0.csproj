@@ -58,6 +58,12 @@
     <Compile Include="f_cuahang.Designer.cs">
       <DependentUpon>f_cuahang.cs</DependentUpon>
     </Compile>
+    <Compile Include="f_hoadonxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_hoadonxuat.Designer.cs">
+      <DependentUpon>f_hoadonxuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="f_sanpham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f_cuahang.resx">
       <DependentUpon>f_cuahang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_hoadonxuat.resx">
+      <DependentUpon>f_hoadonxuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f_sanpham.resx">
       <DependentUpon>f_sanpham.cs</DependentUpon>

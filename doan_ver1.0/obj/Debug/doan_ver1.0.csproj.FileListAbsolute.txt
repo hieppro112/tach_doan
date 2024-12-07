@@ -132,3 +132,4 @@ C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\main_LTUD\doan_ver1.0\o
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\main_LTUD\doan_ver1.0\obj\Debug\doan_ver1.0.exe
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\main_LTUD\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\main_LTUD\doan_ver1.0\obj\Debug\doan_ver1._0.f_cuahang.resources
+C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\main_LTUD\doan_ver1.0\obj\Debug\doan_ver1._0.f_hoadonxuat.resources

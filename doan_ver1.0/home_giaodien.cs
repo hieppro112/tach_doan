@@ -441,7 +441,19 @@ namespace doan_ver1._0
             panel_nhanvien_info.Hide();
             panel_banner.Hide();
             panel_xuathoadon.Hide();
-            hienthi_f_sp();
+            panel_main.Show();
+            hienthi_f_cuahang();
+        }
+
+        private void hienthi_f_cuahang()
+        {
+            f_cuahang f_cuahang = new f_cuahang();
+            f_cuahang.TopLevel = false;
+            f_cuahang.FormBorderStyle = FormBorderStyle.None;
+            f_cuahang.Dock = DockStyle.Fill;
+            panel_main.Controls.Clear();
+            panel_main.Controls.Add(f_cuahang);
+            f_cuahang.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -449,6 +461,37 @@ namespace doan_ver1._0
             txt_seach_nhanvien.Clear();
             dgv_nhanvien.DataSource = loaddl_nhanvien();
 
+        }
+
+        private void app_hoadon_Click(object sender, EventArgs e)
+        {
+            
+            panel_xuathoadon.Hide();
+            panel_banner.Hide();
+            panel_nhanvien_info.Hide();
+            panel_main.Show(); 
+            hienthi_f_xuatHD();
+        }
+        private void hienthi_f_xuatHD()
+        {
+            f_hoadonxuat f_hoadonxuat = new f_hoadonxuat();
+            f_hoadonxuat.TopLevel = false;
+            f_hoadonxuat.FormBorderStyle = FormBorderStyle.None;
+            f_hoadonxuat.Dock = DockStyle.Fill;
+            panel_main.Controls.Clear();
+            panel_main.Controls.Add(f_hoadonxuat);
+
+            f_hoadonxuat.Show();
+
+        }
+
+        private void app_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult a = MessageBox.Show("xac nhan thoat ","ban da chon dang xuat, ban co chac ?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (a == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
 

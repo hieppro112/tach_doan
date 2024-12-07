@@ -98,6 +98,7 @@
             this.txt_seach_nhanvien = new System.Windows.Forms.TextBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.app_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_account)).BeginInit();
             this.app_cuahang.SuspendLayout();
@@ -137,7 +138,7 @@
             this.app_account.Controls.Add(this.pic_account);
             this.app_account.Controls.Add(this.txt_account);
             this.app_account.Location = new System.Drawing.Point(9, 49);
-            this.app_account.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.app_account.Margin = new System.Windows.Forms.Padding(2);
             this.app_account.Name = "app_account";
             this.app_account.Size = new System.Drawing.Size(220, 50);
             this.app_account.TabIndex = 1;
@@ -147,13 +148,12 @@
             // 
             this.pic_account.Image = global::doan_ver1._0.Properties.Resources.profile;
             this.pic_account.Location = new System.Drawing.Point(0, 2);
-            this.pic_account.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_account.Margin = new System.Windows.Forms.Padding(2);
             this.pic_account.Name = "pic_account";
             this.pic_account.Size = new System.Drawing.Size(54, 41);
             this.pic_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_account.TabIndex = 1;
             this.pic_account.TabStop = false;
-            this.pic_account.Click += new System.EventHandler(this.app_account_Click);
             // 
             // txt_account
             // 
@@ -165,7 +165,6 @@
             this.txt_account.Size = new System.Drawing.Size(136, 17);
             this.txt_account.TabIndex = 0;
             this.txt_account.Text = "Quản lý tài khoản";
-            this.txt_account.Click += new System.EventHandler(this.app_account_Click);
             // 
             // imageList1
             // 
@@ -179,17 +178,16 @@
             this.app_cuahang.Controls.Add(this.pictureBox2);
             this.app_cuahang.Controls.Add(this.txt_cuahang);
             this.app_cuahang.Location = new System.Drawing.Point(9, 116);
-            this.app_cuahang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.app_cuahang.Margin = new System.Windows.Forms.Padding(2);
             this.app_cuahang.Name = "app_cuahang";
             this.app_cuahang.Size = new System.Drawing.Size(220, 50);
             this.app_cuahang.TabIndex = 2;
-            this.app_cuahang.Click += new System.EventHandler(this.app_cuahang_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,7 +204,6 @@
             this.txt_cuahang.Size = new System.Drawing.Size(157, 17);
             this.txt_cuahang.TabIndex = 0;
             this.txt_cuahang.Text = "Danh sách cửa hàng";
-            this.txt_cuahang.Click += new System.EventHandler(this.app_cuahang_Click);
             // 
             // app_SanPham
             // 
@@ -214,18 +211,16 @@
             this.app_SanPham.Controls.Add(this.pic_sanpham);
             this.app_SanPham.Controls.Add(this.txt_sanpham);
             this.app_SanPham.Location = new System.Drawing.Point(9, 180);
-            this.app_SanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.app_SanPham.Margin = new System.Windows.Forms.Padding(2);
             this.app_SanPham.Name = "app_SanPham";
             this.app_SanPham.Size = new System.Drawing.Size(220, 50);
             this.app_SanPham.TabIndex = 2;
-            this.app_SanPham.Click += new System.EventHandler(this.app_SanPham_Click);
-            this.app_SanPham.DoubleClick += new System.EventHandler(this.app_SanPham_DoubleClick);
             // 
             // pic_sanpham
             // 
             this.pic_sanpham.Image = ((System.Drawing.Image)(resources.GetObject("pic_sanpham.Image")));
             this.pic_sanpham.Location = new System.Drawing.Point(0, 2);
-            this.pic_sanpham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_sanpham.Margin = new System.Windows.Forms.Padding(2);
             this.pic_sanpham.Name = "pic_sanpham";
             this.pic_sanpham.Size = new System.Drawing.Size(54, 41);
             this.pic_sanpham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,7 +237,6 @@
             this.txt_sanpham.Size = new System.Drawing.Size(165, 17);
             this.txt_sanpham.TabIndex = 0;
             this.txt_sanpham.Text = "Danh Sách Sản Phẩm\r\n";
-            this.txt_sanpham.Click += new System.EventHandler(this.app_SanPham_Click);
             // 
             // app_hoadon
             // 
@@ -250,17 +244,16 @@
             this.app_hoadon.Controls.Add(this.pictureBox4);
             this.app_hoadon.Controls.Add(this.label4);
             this.app_hoadon.Location = new System.Drawing.Point(9, 247);
-            this.app_hoadon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.app_hoadon.Margin = new System.Windows.Forms.Padding(2);
             this.app_hoadon.Name = "app_hoadon";
             this.app_hoadon.Size = new System.Drawing.Size(220, 50);
             this.app_hoadon.TabIndex = 2;
-            this.app_hoadon.Click += new System.EventHandler(this.app_hoadon_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(54, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,7 +277,7 @@
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(9, 311);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(220, 50);
             this.panel6.TabIndex = 2;
@@ -293,7 +286,7 @@
             // 
             this.pictureBox5.Image = global::doan_ver1._0.Properties.Resources.profile;
             this.pictureBox5.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(54, 41);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -328,7 +321,7 @@
             this.control_HDxuat.Controls.Add(this.tabPage3);
             this.control_HDxuat.Controls.Add(this.tabPage4);
             this.control_HDxuat.Location = new System.Drawing.Point(2, 16);
-            this.control_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.control_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.control_HDxuat.Name = "control_HDxuat";
             this.control_HDxuat.SelectedIndex = 0;
             this.control_HDxuat.Size = new System.Drawing.Size(643, 184);
@@ -341,9 +334,9 @@
             this.tabPage3.Controls.Add(this.btn_add_HDxuat);
             this.tabPage3.Controls.Add(this.txt_seach_HDxuat);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(635, 158);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
@@ -353,7 +346,7 @@
             // 
             this.btn_seach_HDxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_seach_HDxuat.Location = new System.Drawing.Point(424, 37);
-            this.btn_seach_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_seach_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_seach_HDxuat.Name = "btn_seach_HDxuat";
             this.btn_seach_HDxuat.Size = new System.Drawing.Size(50, 41);
             this.btn_seach_HDxuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -373,7 +366,7 @@
             "Thời gian tạo",
             ""});
             this.cb_HDxuat.Location = new System.Drawing.Point(128, 47);
-            this.cb_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.cb_HDxuat.Name = "cb_HDxuat";
             this.cb_HDxuat.Size = new System.Drawing.Size(120, 25);
             this.cb_HDxuat.TabIndex = 15;
@@ -385,7 +378,7 @@
             this.btn_add_HDxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_HDxuat.ForeColor = System.Drawing.Color.Transparent;
             this.btn_add_HDxuat.Location = new System.Drawing.Point(260, 95);
-            this.btn_add_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add_HDxuat.Name = "btn_add_HDxuat";
             this.btn_add_HDxuat.Size = new System.Drawing.Size(115, 50);
             this.btn_add_HDxuat.TabIndex = 14;
@@ -396,7 +389,7 @@
             // txt_seach_HDxuat
             // 
             this.txt_seach_HDxuat.Location = new System.Drawing.Point(260, 47);
-            this.txt_seach_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_seach_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_seach_HDxuat.Name = "txt_seach_HDxuat";
             this.txt_seach_HDxuat.Size = new System.Drawing.Size(149, 20);
             this.txt_seach_HDxuat.TabIndex = 13;
@@ -405,9 +398,9 @@
             // 
             this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(635, 158);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "tabPage4";
@@ -429,7 +422,7 @@
             this.table_info_accout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table_info_accout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.table_info_accout.Location = new System.Drawing.Point(0, -159);
-            this.table_info_accout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table_info_accout.Margin = new System.Windows.Forms.Padding(2);
             this.table_info_accout.Name = "table_info_accout";
             this.table_info_accout.ReadOnly = true;
             this.table_info_accout.RowHeadersWidth = 51;
@@ -444,11 +437,10 @@
             this.panel_HDxuat.Controls.Add(this.table_info_accout);
             this.panel_HDxuat.Controls.Add(this.control_HDxuat);
             this.panel_HDxuat.Location = new System.Drawing.Point(250, 50);
-            this.panel_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.panel_HDxuat.Name = "panel_HDxuat";
             this.panel_HDxuat.Size = new System.Drawing.Size(1, 1);
             this.panel_HDxuat.TabIndex = 3;
-            this.panel_HDxuat.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_account_Paint);
             // 
             // label1
             // 
@@ -467,9 +459,9 @@
             this.panel_banner.BackColor = System.Drawing.Color.White;
             this.panel_banner.Controls.Add(this.label1);
             this.panel_banner.Location = new System.Drawing.Point(248, 40);
-            this.panel_banner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_banner.Margin = new System.Windows.Forms.Padding(2);
             this.panel_banner.Name = "panel_banner";
-            this.panel_banner.Size = new System.Drawing.Size(670, 391);
+            this.panel_banner.Size = new System.Drawing.Size(857, 408);
             this.panel_banner.TabIndex = 0;
             // 
             // panel_taikhoan
@@ -508,10 +500,10 @@
             this.tabPage7.Controls.Add(this.comboBox1);
             this.tabPage7.Controls.Add(this.button2);
             this.tabPage7.Controls.Add(this.textBox1);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(849, 198);
+            this.tabPage7.Size = new System.Drawing.Size(849, 201);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -568,10 +560,10 @@
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.label2);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(849, 198);
+            this.tabPage8.Size = new System.Drawing.Size(849, 201);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -591,13 +583,12 @@
             this.dgv_HDxuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HDxuat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_HDxuat.Location = new System.Drawing.Point(0, 202);
-            this.dgv_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_HDxuat.Name = "dgv_HDxuat";
             this.dgv_HDxuat.RowHeadersWidth = 51;
             this.dgv_HDxuat.RowTemplate.Height = 24;
             this.dgv_HDxuat.Size = new System.Drawing.Size(673, 200);
             this.dgv_HDxuat.TabIndex = 0;
-            this.dgv_HDxuat.Click += new System.EventHandler(this.dgv_HDxuat_Click);
             // 
             // label3
             // 
@@ -613,7 +604,7 @@
             // txt_maHDxuat
             // 
             this.txt_maHDxuat.Location = new System.Drawing.Point(124, 18);
-            this.txt_maHDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_maHDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_maHDxuat.Multiline = true;
             this.txt_maHDxuat.Name = "txt_maHDxuat";
             this.txt_maHDxuat.Size = new System.Drawing.Size(118, 25);
@@ -633,7 +624,7 @@
             // txt_machHDxuat
             // 
             this.txt_machHDxuat.Location = new System.Drawing.Point(124, 76);
-            this.txt_machHDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_machHDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_machHDxuat.Multiline = true;
             this.txt_machHDxuat.Name = "txt_machHDxuat";
             this.txt_machHDxuat.Size = new System.Drawing.Size(118, 25);
@@ -653,7 +644,7 @@
             // txt_mSP_cuahang_HDxuat
             // 
             this.txt_mSP_cuahang_HDxuat.Location = new System.Drawing.Point(383, 23);
-            this.txt_mSP_cuahang_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mSP_cuahang_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mSP_cuahang_HDxuat.Multiline = true;
             this.txt_mSP_cuahang_HDxuat.Name = "txt_mSP_cuahang_HDxuat";
             this.txt_mSP_cuahang_HDxuat.Size = new System.Drawing.Size(118, 25);
@@ -673,7 +664,7 @@
             // txt_maNV_HDxuat
             // 
             this.txt_maNV_HDxuat.Location = new System.Drawing.Point(383, 75);
-            this.txt_maNV_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_maNV_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_maNV_HDxuat.Multiline = true;
             this.txt_maNV_HDxuat.Name = "txt_maNV_HDxuat";
             this.txt_maNV_HDxuat.Size = new System.Drawing.Size(118, 25);
@@ -693,7 +684,7 @@
             // txt_soluong_cuahang_HDxuat
             // 
             this.txt_soluong_cuahang_HDxuat.Location = new System.Drawing.Point(124, 130);
-            this.txt_soluong_cuahang_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_soluong_cuahang_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_soluong_cuahang_HDxuat.Multiline = true;
             this.txt_soluong_cuahang_HDxuat.Name = "txt_soluong_cuahang_HDxuat";
             this.txt_soluong_cuahang_HDxuat.Size = new System.Drawing.Size(118, 25);
@@ -703,19 +694,18 @@
             // 
             this.btn_xuathang.BackColor = System.Drawing.Color.RosyBrown;
             this.btn_xuathang.Location = new System.Drawing.Point(550, 18);
-            this.btn_xuathang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_xuathang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xuathang.Name = "btn_xuathang";
             this.btn_xuathang.Size = new System.Drawing.Size(85, 46);
             this.btn_xuathang.TabIndex = 11;
             this.btn_xuathang.Text = "Xuất";
             this.btn_xuathang.UseVisualStyleBackColor = false;
-            this.btn_xuathang.Click += new System.EventHandler(this.btn_xuathang_Click);
             // 
             // btn_xoa_HDxuat
             // 
             this.btn_xoa_HDxuat.BackColor = System.Drawing.Color.RosyBrown;
             this.btn_xoa_HDxuat.Location = new System.Drawing.Point(553, 70);
-            this.btn_xoa_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_xoa_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xoa_HDxuat.Name = "btn_xoa_HDxuat";
             this.btn_xoa_HDxuat.Size = new System.Drawing.Size(85, 46);
             this.btn_xoa_HDxuat.TabIndex = 12;
@@ -726,7 +716,7 @@
             // 
             this.btn_sua_HDxuat.BackColor = System.Drawing.Color.RosyBrown;
             this.btn_sua_HDxuat.Location = new System.Drawing.Point(553, 125);
-            this.btn_sua_HDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_sua_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sua_HDxuat.Name = "btn_sua_HDxuat";
             this.btn_sua_HDxuat.Size = new System.Drawing.Size(85, 46);
             this.btn_sua_HDxuat.TabIndex = 13;
@@ -753,7 +743,7 @@
             this.panel_xuathoadon.Controls.Add(this.label3);
             this.panel_xuathoadon.Controls.Add(this.dgv_HDxuat);
             this.panel_xuathoadon.Location = new System.Drawing.Point(245, 37);
-            this.panel_xuathoadon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_xuathoadon.Margin = new System.Windows.Forms.Padding(2);
             this.panel_xuathoadon.Name = "panel_xuathoadon";
             this.panel_xuathoadon.Size = new System.Drawing.Size(673, 402);
             this.panel_xuathoadon.TabIndex = 17;
@@ -761,7 +751,7 @@
             // date_dateXuat_hdxuat
             // 
             this.date_dateXuat_hdxuat.Location = new System.Drawing.Point(383, 121);
-            this.date_dateXuat_hdxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_dateXuat_hdxuat.Margin = new System.Windows.Forms.Padding(2);
             this.date_dateXuat_hdxuat.Name = "date_dateXuat_hdxuat";
             this.date_dateXuat_hdxuat.Size = new System.Drawing.Size(109, 20);
             this.date_dateXuat_hdxuat.TabIndex = 15;
@@ -783,23 +773,22 @@
             this.panel_nhanvien_info.Controls.Add(this.dgv_nhanvien);
             this.panel_nhanvien_info.Controls.Add(this.tabControl2);
             this.panel_nhanvien_info.Location = new System.Drawing.Point(247, 37);
-            this.panel_nhanvien_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_nhanvien_info.Margin = new System.Windows.Forms.Padding(2);
             this.panel_nhanvien_info.Name = "panel_nhanvien_info";
-            this.panel_nhanvien_info.Size = new System.Drawing.Size(671, 398);
+            this.panel_nhanvien_info.Size = new System.Drawing.Size(858, 409);
             this.panel_nhanvien_info.TabIndex = 18;
-            this.panel_nhanvien_info.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dgv_nhanvien
             // 
             this.dgv_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nhanvien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_nhanvien.Location = new System.Drawing.Point(0, 211);
-            this.dgv_nhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_nhanvien.Location = new System.Drawing.Point(0, 222);
+            this.dgv_nhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_nhanvien.Name = "dgv_nhanvien";
             this.dgv_nhanvien.ReadOnly = true;
             this.dgv_nhanvien.RowHeadersWidth = 51;
             this.dgv_nhanvien.RowTemplate.Height = 24;
-            this.dgv_nhanvien.Size = new System.Drawing.Size(671, 187);
+            this.dgv_nhanvien.Size = new System.Drawing.Size(858, 187);
             this.dgv_nhanvien.TabIndex = 7;
             this.dgv_nhanvien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_info_accout_CellDoubleClick);
             // 
@@ -808,7 +797,7 @@
             this.tabControl2.Controls.Add(this.tabPage9);
             this.tabControl2.Controls.Add(this.tabPage10);
             this.tabControl2.Location = new System.Drawing.Point(16, 11);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(643, 184);
@@ -822,9 +811,9 @@
             this.tabPage9.Controls.Add(this.button1);
             this.tabPage9.Controls.Add(this.txt_seach_nhanvien);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage9.Size = new System.Drawing.Size(635, 158);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "tabPage9";
@@ -834,13 +823,12 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(441, 98);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(75, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btn_seach_nhanvien
             // 
@@ -848,13 +836,12 @@
             this.btn_seach_nhanvien.Image = global::doan_ver1._0.Properties.Resources.find;
             this.btn_seach_nhanvien.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_seach_nhanvien.InitialImage")));
             this.btn_seach_nhanvien.Location = new System.Drawing.Point(424, 37);
-            this.btn_seach_nhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_seach_nhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_seach_nhanvien.Name = "btn_seach_nhanvien";
             this.btn_seach_nhanvien.Size = new System.Drawing.Size(50, 41);
             this.btn_seach_nhanvien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_seach_nhanvien.TabIndex = 16;
             this.btn_seach_nhanvien.TabStop = false;
-            this.btn_seach_nhanvien.Click += new System.EventHandler(this.btn_seach_click);
             // 
             // cb_seach_nhanvien
             // 
@@ -870,7 +857,7 @@
             "Thời gian tạo",
             ""});
             this.cb_seach_nhanvien.Location = new System.Drawing.Point(128, 47);
-            this.cb_seach_nhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_seach_nhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.cb_seach_nhanvien.Name = "cb_seach_nhanvien";
             this.cb_seach_nhanvien.Size = new System.Drawing.Size(120, 25);
             this.cb_seach_nhanvien.TabIndex = 15;
@@ -881,18 +868,17 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(260, 95);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 50);
             this.button1.TabIndex = 14;
             this.button1.Text = "Đăng ký TK";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_seach_nhanvien
             // 
             this.txt_seach_nhanvien.Location = new System.Drawing.Point(260, 47);
-            this.txt_seach_nhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_seach_nhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_seach_nhanvien.Name = "txt_seach_nhanvien";
             this.txt_seach_nhanvien.Size = new System.Drawing.Size(149, 20);
             this.txt_seach_nhanvien.TabIndex = 13;
@@ -901,9 +887,9 @@
             // 
             this.tabPage10.Controls.Add(this.label18);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage10.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage10.Size = new System.Drawing.Size(635, 158);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "tabPage10";
@@ -920,12 +906,20 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "helloo";
             // 
+            // panel_main
+            // 
+            this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel_main.Location = new System.Drawing.Point(245, 37);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(862, 411);
+            this.panel_main.TabIndex = 1;
+            // 
             // home_giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1109, 601);
+            this.ClientSize = new System.Drawing.Size(1109, 481);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.app_hoadon);
@@ -933,15 +927,15 @@
             this.Controls.Add(this.app_cuahang);
             this.Controls.Add(this.app_account);
             this.Controls.Add(this.panel_HDxuat);
-            this.Controls.Add(this.panel_banner);
             this.Controls.Add(this.panel_nhanvien_info);
             this.Controls.Add(this.panel_xuathoadon);
+            this.Controls.Add(this.panel_main);
+            this.Controls.Add(this.panel_banner);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "home_giaodien";
             this.Text = "home_giaodien";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.home_giaodien_FormClosed);
-            this.Load += new System.EventHandler(this.home_giaodien_Load);
             this.app_account.ResumeLayout(false);
             this.app_account.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_account)).EndInit();
@@ -1060,5 +1054,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DateTimePicker date_dateXuat_hdxuat;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel_main;
     }
 }

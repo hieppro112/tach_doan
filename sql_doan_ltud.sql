@@ -251,6 +251,49 @@ end;
 	('Cửa Hàng MediaMart', '101 Đường Phạm Hùng, Hà Nội', '0923456789'),
 	('Cửa Hàng Pico', '303 Đường Nguyễn Trãi, Hà Nội', '0934567890');
 
+
+	create proc [dbo].[tp_ThemCuaHang](@tenCuaHang nvarchar(100), @diaChi nvarchar(200),@soDienThoai nvarchar (15))
+	as
+	insert into CUAHANG values(@tenCuaHang,@diaChi,@soDienThoai)
+	GO
+
+	create proc [dbo].[tp_XoaCuaHang](@maCuaHang int)
+	as 
+	delete CUAHANG 
+	where MaCuaHang = @maCuaHang
+	GO
+
+	create proc [dbo].[tp_SuaCuaHang](@maCuaHang int,@tenCuaHang nvarchar(100), @diaChi nvarchar(200),@soDienThoai nvarchar (15))
+	as
+	update CUAHANG set TenCuaHang = @tenCuaHang,
+					   DiaChi = @diaChi,
+					   SoDienThoai = @soDienThoai
+		where MaCuaHang = @maCuaHang
+	GO
+
+	--start seach cua hang
+	--seach diachi
+	create proc [dbo].[seach_DiaChi](@diaChi nvarchar(200))
+	as
+	select * from CuaHang 
+	where DiaChi  = @diaChi
+	GO
+	--seach ma cua hang
+	create proc [dbo].[seach_MACH](@maCuaHang int)
+	as
+	select * from CuaHang
+	where MaCuaHang  = @maCuaHang
+	GO
+
+	--seach ten cua hang
+	create proc [dbo].[seach_TenCH](@tenCuaHang  nvarchar(100))
+	as
+	select * from CuaHang 
+	where TenCuaHang  = @tenCuaHang
+	GO
+	--
+
+
 	-- sql hóa đơn xuất
 
 	ALTER TABLE SanPham

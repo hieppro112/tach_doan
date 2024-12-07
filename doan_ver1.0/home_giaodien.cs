@@ -159,19 +159,6 @@ namespace doan_ver1._0
             dangky.ShowDialog();
         }
 
-       
-
-      
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Sp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void app_SanPham_Click(object sender, EventArgs e)
         {
@@ -474,6 +461,7 @@ namespace doan_ver1._0
             panel_banner.Hide();
             panel_xuathoadon.Hide();
             panel_nhanvien_info.Hide();
+            hienthi_sp();
         }
 
         private void panel_account_Paint(object sender, PaintEventArgs e)
@@ -1208,6 +1196,25 @@ namespace doan_ver1._0
                 connect.Close();
             }
             dgv_HDxuat.DataSource = loaddl_HDxuat();
+        }
+
+        private void app_SanPham_DoubleClick(object sender, EventArgs e)
+        {
+            
+
+
+        }
+        private void hienthi_sp()
+        {
+            f_sanpham f_Sanpham = new f_sanpham();
+            f_Sanpham.TopLevel = false;
+            f_Sanpham.FormBorderStyle = FormBorderStyle.None;
+            f_Sanpham.Dock = DockStyle.Fill;
+
+            panel_sanpham.Controls.Clear();
+            panel_sanpham.Controls.Add(f_Sanpham);
+
+            f_Sanpham.Show();
         }
     }
     }

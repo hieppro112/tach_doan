@@ -215,6 +215,7 @@
             this.app_SanPham.Name = "app_SanPham";
             this.app_SanPham.Size = new System.Drawing.Size(220, 50);
             this.app_SanPham.TabIndex = 2;
+            this.app_SanPham.Click += new System.EventHandler(this.app_SanPham_Click);
             // 
             // pic_sanpham
             // 
@@ -800,7 +801,7 @@
             this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(643, 184);
+            this.tabControl2.Size = new System.Drawing.Size(835, 194);
             this.tabControl2.TabIndex = 6;
             // 
             // tabPage9
@@ -814,7 +815,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Size = new System.Drawing.Size(635, 158);
+            this.tabPage9.Size = new System.Drawing.Size(827, 168);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "tabPage9";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -936,6 +937,7 @@
             this.Name = "home_giaodien";
             this.Text = "home_giaodien";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.home_giaodien_FormClosed);
+            this.Load += new System.EventHandler(this.home_giaodien_Load);
             this.app_account.ResumeLayout(false);
             this.app_account.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_account)).EndInit();

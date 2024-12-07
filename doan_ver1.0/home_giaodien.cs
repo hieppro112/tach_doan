@@ -242,15 +242,11 @@ namespace doan_ver1._0
 
         //}
 
-        private void btnLamMoi_Sp_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void table_info_accout_DoubleClick(object sender, EventArgs e)
         {
 
         }
+        //hien thi nhan vien 
         private void hienthi_f_sp()
         {
             f_sanpham f_Sanpham = new f_sanpham();
@@ -262,6 +258,67 @@ namespace doan_ver1._0
             panel_main.Controls.Add(f_Sanpham);
 
             f_Sanpham.Show();
+        }
+
+        //seach nhan vien
+        private void btn_seach_click(object sender, EventArgs e)
+        {
+            seach_nhanvien();
+        }
+        private void seach_nhanvien()
+        {
+            int vitri = cb_seach_nhanvien.SelectedIndex;
+            switch (vitri)
+            {
+                case 0:
+                    dgv_nhanvien.DataSource = seach_sql("seach_maTK", "@maTK");
+                    break;
+                case 1:
+                    dgv_nhanvien.DataSource = seach_sql("seach_user", "@user");
+                    break;
+
+                case 2:
+                    dgv_nhanvien.DataSource = seach_sql("seach_name", "@name");
+                    break;
+                case 3:
+                    dgv_nhanvien.DataSource = seach_sql("seach_email", "@email");
+                    break;
+                case 4:
+                    dgv_nhanvien.DataSource = seach_sql("seach_vaitro", "@vaitro");
+                    break;
+
+                default:
+                    MessageBox.Show("Không tìm thấy nhân viên phù hợp"); break;
+            }
+        }
+
+        private DataTable seach_sql(string sql, string data)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(sql, connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter a = new SqlParameter(data, txt_seach_nhanvien.Text);
+                cmd.Parameters.Add(a);
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter hienthi = new SqlDataAdapter(cmd);
+                hienthi.Fill(table);
+
+                return table;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return null;
         }
 
         //private void btnXoa_Sp_Click(object sender, EventArgs e)
@@ -373,7 +430,10 @@ namespace doan_ver1._0
 
         private void home_giaodien_Load(object sender, EventArgs e)
         {
-
+            dgv_nhanvien.DataSource = loaddl_nhanvien();
+            dgv_nhanvien.DefaultCellStyle.ForeColor = Color.Black;
+            cb_seach_nhanvien.SelectedIndex = 0;
+            
         }
 
         private void app_SanPham_Click(object sender, EventArgs e)
@@ -382,6 +442,13 @@ namespace doan_ver1._0
             panel_banner.Hide();
             panel_xuathoadon.Hide();
             hienthi_f_sp();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            txt_seach_nhanvien.Clear();
+            dgv_nhanvien.DataSource = loaddl_nhanvien();
+
         }
 
 
@@ -527,65 +594,7 @@ namespace doan_ver1._0
 
 //    }
 
-//    private void btn_seach_click(object sender, EventArgs e)
-//    {
-//        seach_nhanvien();
-//    }
-//    private void seach_nhanvien()
-//    {
-//        int vitri = cb_seach_nhanvien.SelectedIndex;
-//        switch (vitri)
-//        {
-//            case 0:
-//                dgv_nhanvien.DataSource = seach_sql("seach_maTK", "@maTK");
-//                break;
-//            case 1:
-//                dgv_nhanvien.DataSource = seach_sql("seach_user", "@user");
-//                break;
 
-//            case 2:
-//                dgv_nhanvien.DataSource = seach_sql("seach_name", "@name");
-//                break;
-//            case 3:
-//                dgv_nhanvien.DataSource = seach_sql("seach_email", "@email");
-//                break;
-//            case 4:
-//                dgv_nhanvien.DataSource = seach_sql("seach_vaitro", "@vaitro");
-//                break;
-
-//            default:
-//                MessageBox.Show("Không tìm thấy nhân viên phù hợp"); break;
-//        }
-//    }
-
-//    private DataTable seach_sql(string sql, string data)
-//    {
-//        DataTable table = new DataTable();
-//        try
-//        {
-//            connect.Open();
-//            SqlCommand cmd = new SqlCommand(sql, connect);
-//            cmd.CommandType = CommandType.StoredProcedure;
-
-//            SqlParameter a = new SqlParameter(data, txt_seach_nhanvien.Text);
-//            cmd.Parameters.Add(a);
-//            cmd.ExecuteNonQuery();
-
-//            SqlDataAdapter hienthi = new SqlDataAdapter(cmd);
-//            hienthi.Fill(table);
-
-//            return table;
-//        }
-//        catch (Exception ex)
-//        {
-//            MessageBox.Show(ex.Message);
-//        }
-//        finally
-//        {
-//            connect.Close();
-//        }
-//        return null;
-//    }
 
 //    private void pannel_cuahang_Paint(object sender, PaintEventArgs e)
 //    {

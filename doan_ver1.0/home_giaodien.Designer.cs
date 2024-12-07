@@ -583,12 +583,12 @@
             // 
             this.dgv_HDxuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HDxuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_HDxuat.Location = new System.Drawing.Point(0, 202);
+            this.dgv_HDxuat.Location = new System.Drawing.Point(0, 211);
             this.dgv_HDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_HDxuat.Name = "dgv_HDxuat";
             this.dgv_HDxuat.RowHeadersWidth = 51;
             this.dgv_HDxuat.RowTemplate.Height = 24;
-            this.dgv_HDxuat.Size = new System.Drawing.Size(673, 200);
+            this.dgv_HDxuat.Size = new System.Drawing.Size(862, 200);
             this.dgv_HDxuat.TabIndex = 0;
             // 
             // label3
@@ -746,7 +746,7 @@
             this.panel_xuathoadon.Location = new System.Drawing.Point(245, 37);
             this.panel_xuathoadon.Margin = new System.Windows.Forms.Padding(2);
             this.panel_xuathoadon.Name = "panel_xuathoadon";
-            this.panel_xuathoadon.Size = new System.Drawing.Size(673, 402);
+            this.panel_xuathoadon.Size = new System.Drawing.Size(862, 411);
             this.panel_xuathoadon.TabIndex = 17;
             // 
             // date_dateXuat_hdxuat
@@ -781,6 +781,7 @@
             // 
             // dgv_nhanvien
             // 
+            this.dgv_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nhanvien.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_nhanvien.Location = new System.Drawing.Point(0, 222);
@@ -830,6 +831,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btn_seach_nhanvien
             // 
@@ -843,10 +845,10 @@
             this.btn_seach_nhanvien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_seach_nhanvien.TabIndex = 16;
             this.btn_seach_nhanvien.TabStop = false;
+            this.btn_seach_nhanvien.Click += new System.EventHandler(this.btn_seach_click);
             // 
             // cb_seach_nhanvien
             // 
-            this.cb_seach_nhanvien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_seach_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_seach_nhanvien.FormattingEnabled = true;
             this.cb_seach_nhanvien.Items.AddRange(new object[] {
@@ -875,6 +877,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Đăng ký TK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btn_dangky_Click);
             // 
             // txt_seach_nhanvien
             // 
@@ -891,7 +894,7 @@
             this.tabPage10.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage10.Size = new System.Drawing.Size(635, 158);
+            this.tabPage10.Size = new System.Drawing.Size(827, 168);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "tabPage10";
             this.tabPage10.UseVisualStyleBackColor = true;

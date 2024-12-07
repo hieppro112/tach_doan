@@ -91,6 +91,7 @@
             // 
             // cbVaitro
             // 
+            this.cbVaitro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVaitro.FormattingEnabled = true;
             this.cbVaitro.Items.AddRange(new object[] {
             "NHÂN VIÊN",
@@ -196,6 +197,7 @@
             this.btnLamMoi.TabIndex = 14;
             this.btnLamMoi.Text = "LÀM MỚI";
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnThoat
             // 

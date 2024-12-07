@@ -111,3 +111,6 @@ D:\LTUD\DoAn_ver999\Main_DoAn_AD\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.Genera
 D:\LTUD\DoAn_ver999\Main_DoAn_AD\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.CoreCompileInputs.cache
 D:\LTUD\DoAn_ver999\Main_DoAn_AD\doan_ver1.0\obj\Debug\doan_ver1.0.exe
 D:\LTUD\DoAn_ver999\Main_DoAn_AD\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
+C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doanver2\DoAn_ADO.NET\doan_ver1.0\bin\Debug\Guna.UI2.dll
+C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doanver2\DoAn_ADO.NET\doan_ver1.0\obj\Debug\doan_ver1._0.hdXuat.resources
+C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doanver2\DoAn_ADO.NET\doan_ver1.0\obj\Debug\doan_ver.B7330AA3.Up2Date

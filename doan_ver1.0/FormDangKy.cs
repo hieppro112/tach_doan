@@ -50,7 +50,7 @@ namespace doan_ver1._0
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             them_account();
-            this.Close();
+            
             
         }
         private void them_account() {
@@ -103,8 +103,22 @@ namespace doan_ver1._0
                 }
 
             }
+            catch (SqlException ex)
+            {
+                // Kiểm tra mã lỗi SQL
+                if (ex.Number == 2627 || ex.Number == 2601) // Mã lỗi UNIQUE KEY
+                {
+                    MessageBox.Show("Lỗi: Tên tài khoản đã tồn tại!");
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi SQL: " + ex.Message);
+                }
+            }
             catch (Exception ex)
             {
+                
+
                 MessageBox.Show(ex.Message);
 
             }
@@ -147,6 +161,16 @@ namespace doan_ver1._0
         private void FormDangKy_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtTenDangNhap.Clear();
+            txtPass.Clear();
+            txtHoTen.Clear();
+            txtEmail.Clear();
+            dateNgayTao.Value = DateTime.Now;
+            cbVaitro.SelectedIndex = 0;
         }
     }
 }

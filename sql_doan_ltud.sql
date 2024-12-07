@@ -63,6 +63,8 @@ as
 select * from TaiKhoan 
 where MaTaiKhoan = @maTK
 
+
+
 create proc seach_name(@name nvarchar(100))
 as
 select * from TaiKhoan 
@@ -201,6 +203,30 @@ BEGIN
     WHERE MaSanPham = @MaSanPham;
 end;
 
+-- store seach san pham
+create proc sp_timKiem_DanhMuc(@DanhMuc nvarchar (100))
+as
+begin
+select * from SanPham
+where DanhMuc = @DanhMuc
+end;
+
+create proc sp_timKiem_MaSanPham (@MaSanPham nvarchar(50))
+as
+begin
+select * from SanPham
+where MaSanPham = @MaSanPham
+end;
+
+create proc sp_timKiem_TenSP
+@tenSanPham nvarchar (100)
+as
+begin
+select * from SanPham
+where TenSanPham like '%' + @tenSanPham +'%';
+end;
+
+
 
 --ket thuc phan san pham cua thuan
 
@@ -243,7 +269,7 @@ ADD CONSTRAINT UQ_MaSanPham UNIQUE (MaSanPham);
 	);
 
 
-
+	-- hóa đơn
 	create proc them_HDxuat(@mahd nvarchar(50) , @masp nvarchar(50), @mach int , @manv int, @soluong int ,@ngayxuat datetime)
 	as
 	insert into HDXuatHang values (@mahd,@masp,@mach,@manv,@soluong,@ngayxuat)
@@ -258,8 +284,14 @@ ADD CONSTRAINT UQ_MaSanPham UNIQUE (MaSanPham);
 	select *
 	from HDXuatHang
 
+	create proc tp_xemHD
+	as
+	select *
+	from HDXuatHang
+
+	exec tp_xemHD
 	exec xoa_HDxuat 'hd1'
-	exec them_HDxuat 'hd1','SP001','1','4','12','2/5/2024'
+	exec them_HDxuat 'hd2','SP002','1','4','12','2/5/2024'
 	select * from HDXuatHang
 
 	

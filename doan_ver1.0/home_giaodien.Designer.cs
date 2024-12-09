@@ -70,23 +70,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgv_HDxuat = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_maHDxuat = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txt_machHDxuat = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_mSP_cuahang_HDxuat = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txt_maNV_HDxuat = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txt_soluong_cuahang_HDxuat = new System.Windows.Forms.TextBox();
-            this.btn_xuathang = new System.Windows.Forms.Button();
-            this.btn_xoa_HDxuat = new System.Windows.Forms.Button();
-            this.btn_sua_HDxuat = new System.Windows.Forms.Button();
-            this.panel_xuathoadon = new System.Windows.Forms.Panel();
-            this.date_dateXuat_hdxuat = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel_nhanvien_info = new System.Windows.Forms.Panel();
             this.dgv_nhanvien = new System.Windows.Forms.DataGridView();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -124,8 +107,6 @@
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_HDxuat)).BeginInit();
-            this.panel_xuathoadon.SuspendLayout();
             this.panel_nhanvien_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhanvien)).BeginInit();
             this.tabControl2.SuspendLayout();
@@ -247,7 +228,7 @@
             // 
             // app_hoadon
             // 
-            this.app_hoadon.BackColor = System.Drawing.Color.Silver;
+            this.app_hoadon.BackColor = System.Drawing.Color.LightSalmon;
             this.app_hoadon.Controls.Add(this.pictureBox4);
             this.app_hoadon.Controls.Add(this.label4);
             this.app_hoadon.Location = new System.Drawing.Point(12, 304);
@@ -505,10 +486,10 @@
             this.tabPage7.Controls.Add(this.comboBox1);
             this.tabPage7.Controls.Add(this.button2);
             this.tabPage7.Controls.Add(this.textBox1);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(849, 201);
+            this.tabPage7.Size = new System.Drawing.Size(849, 198);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -565,10 +546,10 @@
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.label2);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(849, 201);
+            this.tabPage8.Size = new System.Drawing.Size(849, 198);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -583,191 +564,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "helloo";
             // 
-            // dgv_HDxuat
-            // 
-            this.dgv_HDxuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HDxuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_HDxuat.Location = new System.Drawing.Point(0, 260);
-            this.dgv_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_HDxuat.Name = "dgv_HDxuat";
-            this.dgv_HDxuat.RowHeadersWidth = 51;
-            this.dgv_HDxuat.RowTemplate.Height = 24;
-            this.dgv_HDxuat.Size = new System.Drawing.Size(1149, 246);
-            this.dgv_HDxuat.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(29, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Mã HD xuất hàng";
-            // 
-            // txt_maHDxuat
-            // 
-            this.txt_maHDxuat.Location = new System.Drawing.Point(165, 22);
-            this.txt_maHDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_maHDxuat.Multiline = true;
-            this.txt_maHDxuat.Name = "txt_maHDxuat";
-            this.txt_maHDxuat.Size = new System.Drawing.Size(156, 30);
-            this.txt_maHDxuat.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(29, 96);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 16);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Mã cửa hàng";
-            // 
-            // txt_machHDxuat
-            // 
-            this.txt_machHDxuat.Location = new System.Drawing.Point(165, 94);
-            this.txt_machHDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_machHDxuat.Multiline = true;
-            this.txt_machHDxuat.Name = "txt_machHDxuat";
-            this.txt_machHDxuat.Size = new System.Drawing.Size(156, 30);
-            this.txt_machHDxuat.TabIndex = 4;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(375, 31);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 16);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Mã sản phẩm:";
-            // 
-            // txt_mSP_cuahang_HDxuat
-            // 
-            this.txt_mSP_cuahang_HDxuat.Location = new System.Drawing.Point(511, 28);
-            this.txt_mSP_cuahang_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_mSP_cuahang_HDxuat.Multiline = true;
-            this.txt_mSP_cuahang_HDxuat.Name = "txt_mSP_cuahang_HDxuat";
-            this.txt_mSP_cuahang_HDxuat.Size = new System.Drawing.Size(156, 30);
-            this.txt_mSP_cuahang_HDxuat.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(375, 95);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 16);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "Mã nhân viên:";
-            // 
-            // txt_maNV_HDxuat
-            // 
-            this.txt_maNV_HDxuat.Location = new System.Drawing.Point(511, 92);
-            this.txt_maNV_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_maNV_HDxuat.Multiline = true;
-            this.txt_maNV_HDxuat.Name = "txt_maNV_HDxuat";
-            this.txt_maNV_HDxuat.Size = new System.Drawing.Size(156, 30);
-            this.txt_maNV_HDxuat.TabIndex = 8;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(29, 162);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 16);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "số lượng";
-            // 
-            // txt_soluong_cuahang_HDxuat
-            // 
-            this.txt_soluong_cuahang_HDxuat.Location = new System.Drawing.Point(165, 160);
-            this.txt_soluong_cuahang_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_soluong_cuahang_HDxuat.Multiline = true;
-            this.txt_soluong_cuahang_HDxuat.Name = "txt_soluong_cuahang_HDxuat";
-            this.txt_soluong_cuahang_HDxuat.Size = new System.Drawing.Size(156, 30);
-            this.txt_soluong_cuahang_HDxuat.TabIndex = 10;
-            // 
-            // btn_xuathang
-            // 
-            this.btn_xuathang.BackColor = System.Drawing.Color.RosyBrown;
-            this.btn_xuathang.Location = new System.Drawing.Point(733, 22);
-            this.btn_xuathang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_xuathang.Name = "btn_xuathang";
-            this.btn_xuathang.Size = new System.Drawing.Size(113, 57);
-            this.btn_xuathang.TabIndex = 11;
-            this.btn_xuathang.Text = "Xuất";
-            this.btn_xuathang.UseVisualStyleBackColor = false;
-            // 
-            // btn_xoa_HDxuat
-            // 
-            this.btn_xoa_HDxuat.BackColor = System.Drawing.Color.RosyBrown;
-            this.btn_xoa_HDxuat.Location = new System.Drawing.Point(737, 86);
-            this.btn_xoa_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_xoa_HDxuat.Name = "btn_xoa_HDxuat";
-            this.btn_xoa_HDxuat.Size = new System.Drawing.Size(113, 57);
-            this.btn_xoa_HDxuat.TabIndex = 12;
-            this.btn_xoa_HDxuat.Text = "Xóa HD";
-            this.btn_xoa_HDxuat.UseVisualStyleBackColor = false;
-            // 
-            // btn_sua_HDxuat
-            // 
-            this.btn_sua_HDxuat.BackColor = System.Drawing.Color.RosyBrown;
-            this.btn_sua_HDxuat.Location = new System.Drawing.Point(737, 154);
-            this.btn_sua_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_sua_HDxuat.Name = "btn_sua_HDxuat";
-            this.btn_sua_HDxuat.Size = new System.Drawing.Size(113, 57);
-            this.btn_sua_HDxuat.TabIndex = 13;
-            this.btn_sua_HDxuat.Text = "Sửa HD";
-            this.btn_sua_HDxuat.UseVisualStyleBackColor = false;
-            // 
-            // panel_xuathoadon
-            // 
-            this.panel_xuathoadon.BackColor = System.Drawing.Color.LightGray;
-            this.panel_xuathoadon.Controls.Add(this.date_dateXuat_hdxuat);
-            this.panel_xuathoadon.Controls.Add(this.label19);
-            this.panel_xuathoadon.Controls.Add(this.btn_sua_HDxuat);
-            this.panel_xuathoadon.Controls.Add(this.btn_xoa_HDxuat);
-            this.panel_xuathoadon.Controls.Add(this.btn_xuathang);
-            this.panel_xuathoadon.Controls.Add(this.txt_soluong_cuahang_HDxuat);
-            this.panel_xuathoadon.Controls.Add(this.label17);
-            this.panel_xuathoadon.Controls.Add(this.txt_maNV_HDxuat);
-            this.panel_xuathoadon.Controls.Add(this.label16);
-            this.panel_xuathoadon.Controls.Add(this.txt_mSP_cuahang_HDxuat);
-            this.panel_xuathoadon.Controls.Add(this.label15);
-            this.panel_xuathoadon.Controls.Add(this.txt_machHDxuat);
-            this.panel_xuathoadon.Controls.Add(this.label14);
-            this.panel_xuathoadon.Controls.Add(this.txt_maHDxuat);
-            this.panel_xuathoadon.Controls.Add(this.label3);
-            this.panel_xuathoadon.Controls.Add(this.dgv_HDxuat);
-            this.panel_xuathoadon.Location = new System.Drawing.Point(327, 46);
-            this.panel_xuathoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_xuathoadon.Name = "panel_xuathoadon";
-            this.panel_xuathoadon.Size = new System.Drawing.Size(1149, 506);
-            this.panel_xuathoadon.TabIndex = 17;
-            // 
-            // date_dateXuat_hdxuat
-            // 
-            this.date_dateXuat_hdxuat.Location = new System.Drawing.Point(511, 149);
-            this.date_dateXuat_hdxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.date_dateXuat_hdxuat.Name = "date_dateXuat_hdxuat";
-            this.date_dateXuat_hdxuat.Size = new System.Drawing.Size(144, 22);
-            this.date_dateXuat_hdxuat.TabIndex = 15;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(381, 146);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 16);
-            this.label19.TabIndex = 14;
-            this.label19.Text = "Ngay xuat HD:";
-            // 
             // panel_nhanvien_info
             // 
+            this.panel_nhanvien_info.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_nhanvien_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel_nhanvien_info.Controls.Add(this.dgv_nhanvien);
             this.panel_nhanvien_info.Controls.Add(this.tabControl2);
@@ -796,7 +596,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage9);
             this.tabControl2.Controls.Add(this.tabPage10);
-            this.tabControl2.Location = new System.Drawing.Point(21, 14);
+            this.tabControl2.Location = new System.Drawing.Point(17, 14);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -816,7 +616,7 @@
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage9.Size = new System.Drawing.Size(1105, 210);
             this.tabPage9.TabIndex = 0;
-            this.tabPage9.Text = "tabPage9";
+            this.tabPage9.Text = "Tài Khoản";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
@@ -847,6 +647,7 @@
             // 
             // cb_seach_nhanvien
             // 
+            this.cb_seach_nhanvien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_seach_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_seach_nhanvien.FormattingEnabled = true;
             this.cb_seach_nhanvien.Items.AddRange(new object[] {
@@ -894,7 +695,7 @@
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage10.Size = new System.Drawing.Size(1105, 210);
             this.tabPage10.TabIndex = 1;
-            this.tabPage10.Text = "tabPage10";
+            this.tabPage10.Text = "Nhân viên";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // label18
@@ -909,12 +710,16 @@
             // 
             // panel_main
             // 
+            this.panel_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel_main.Location = new System.Drawing.Point(327, 46);
-            this.panel_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1149, 506);
             this.panel_main.TabIndex = 1;
+            this.panel_main.Click += new System.EventHandler(this.panel_main_Click);
             // 
             // app_logout
             // 
@@ -938,6 +743,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.app_logout_Click);
             // 
             // label8
             // 
@@ -948,6 +754,7 @@
             this.label8.Size = new System.Drawing.Size(114, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Đăng Xuất";
+            this.label8.Click += new System.EventHandler(this.app_logout_Click);
             // 
             // home_giaodien
             // 
@@ -963,10 +770,9 @@
             this.Controls.Add(this.app_cuahang);
             this.Controls.Add(this.app_account);
             this.Controls.Add(this.panel_HDxuat);
+            this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_banner);
             this.Controls.Add(this.panel_nhanvien_info);
-            this.Controls.Add(this.panel_xuathoadon);
-            this.Controls.Add(this.panel_main);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home_giaodien";
@@ -1005,9 +811,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_HDxuat)).EndInit();
-            this.panel_xuathoadon.ResumeLayout(false);
-            this.panel_xuathoadon.PerformLayout();
             this.panel_nhanvien_info.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhanvien)).EndInit();
             this.tabControl2.ResumeLayout(false);
@@ -1065,21 +868,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv_HDxuat;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_maHDxuat;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txt_machHDxuat;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txt_mSP_cuahang_HDxuat;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txt_maNV_HDxuat;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txt_soluong_cuahang_HDxuat;
-        private System.Windows.Forms.Button btn_xuathang;
-        private System.Windows.Forms.Button btn_xoa_HDxuat;
-        private System.Windows.Forms.Button btn_sua_HDxuat;
-        private System.Windows.Forms.Panel panel_xuathoadon;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel_nhanvien_info;
         private System.Windows.Forms.DataGridView dgv_nhanvien;
@@ -1091,8 +879,6 @@
         private System.Windows.Forms.TextBox txt_seach_nhanvien;
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DateTimePicker date_dateXuat_hdxuat;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.Panel app_logout;

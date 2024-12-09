@@ -104,6 +104,7 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Size = new System.Drawing.Size(1085, 412);
             this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Cửa Hàng";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // dgvCuaHang1
@@ -263,7 +264,7 @@
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabPage6.Size = new System.Drawing.Size(1085, 412);
             this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.Text = "Tìm kiếm";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // dgvTimKiem

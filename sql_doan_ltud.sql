@@ -332,6 +332,35 @@ ADD CONSTRAINT UQ_MaSanPham UNIQUE (MaSanPham);
 	select *
 	from HDXuatHang
 
+	--seach 
+	create proc tp_seach_mahD(@maHD nvarchar(50))
+	as
+	select * 
+	from HDXuatHang 
+	where MaHoaDon = @maHD
+
+	create proc tp_seach_maNV(@manv Int)
+	as
+	select *
+	from HDXuatHang
+	where MaNhanVien = @manv
+	
+
+	--seach theo thời gian 
+	CREATE PROCEDURE tp_search_ngayXuat
+    @ThoiGianA DATETIME,
+    @ThoiGianB DATETIME
+AS
+BEGIN
+    SELECT *
+    FROM HDXuatHang
+    WHERE NgayXuat BETWEEN @ThoiGianA AND @ThoiGianB
+    ORDER BY NgayXuat;
+END;
+
+
+	exec tp_search_ngayXuat '1/01/2000','12/09/2000'
+	exec tp_seach_maNV'4'
 	exec tp_xemHD
 	exec xoa_HDxuat 'hd1'
 	exec them_HDxuat 'hd2','SP002','1','4','12','2/5/2024'

@@ -24,6 +24,11 @@ namespace doan_ver1._0
         {
             dgv_HDxuat.DataSource = loaddl_HDxuat();
             dgv_HDxuat.DefaultCellStyle.ForeColor = Color.Black;
+            
+        }
+        private void show_report()
+        {
+           
         }
         private DataTable loaddl_HDxuat()
         {
@@ -184,6 +189,148 @@ namespace doan_ver1._0
                 connect.Close();
             }
             dgv_HDxuat.DataSource = loaddl_HDxuat();
+        }
+
+        private void rdbTimtheoma_CheckedChanged(object sender, EventArgs e)
+        {
+            txtTimtheoma.Enabled = rdt_seach_maHD.Checked;
+            txt_seach_manv.Enabled = false;
+            date_seach.Enabled = false;
+            txtTimtheoma.Clear();
+            txt_seach_manv.Clear();
+
+            
+        }
+
+        private void rdt_seach_manv_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_seach_manv.Enabled = rdt_seach_manv.Checked;
+            txtTimtheoma.Enabled = false;
+            txtTimtheoma.Clear();
+            txt_seach_manv.Clear();
+        }
+
+        private void rdbTimtheodc_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_seach_manv.Enabled = rdt_seach_manv.Enabled;
+            date_seach.Enabled=false;
+            txtTimtheoma.Enabled = false;
+            txt_seach_manv.Enabled = false;
+            txtTimtheoma.Clear();
+            txt_seach_manv.Clear();
+        }
+
+        private void rdc_seach_date_CheckedChanged(object sender, EventArgs e)
+        {
+            date_seach.Enabled = true;
+            txtTimtheoma.Enabled = false;
+            txt_seach_manv.Enabled = false;
+            txtTimtheoma.Clear();
+            txt_seach_manv.Clear();
+
+        }
+
+        private DataTable seach_hd_xuat(string path,string store,string content)
+        {
+            DataTable table = new DataTable();  
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(path,connect);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter x = new SqlParameter(store,content);
+                cmd.Parameters.Add(x);
+
+                SqlDataAdapter hienthi = new SqlDataAdapter(cmd);
+                hienthi.Fill(table);
+
+                return table;
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return null;
+        }
+        private DataTable seach_hd_xuat_date(string path, string store,string store2, string content1,string content2)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(path, connect);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter x = new SqlParameter(store, content1);
+                cmd.Parameters.Add(x);
+                SqlParameter x2 = new SqlParameter(store2, content2);
+                cmd.Parameters.Add(x2);
+
+                SqlDataAdapter hienthi = new SqlDataAdapter(cmd);
+                hienthi.Fill(table);
+
+                return table;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return null;
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if(rdt_seach_maHD.Checked == true)
+            {
+                dgv_HDxuat.DataSource = seach_hd_xuat("tp_seach_mahD", "@maHD", txtTimtheoma.Text);
+            }
+            else if(rdt_seach_manv.Checked == true)
+            {
+                dgv_HDxuat.DataSource = seach_hd_xuat("tp_seach_maNV", "@manv", txt_seach_manv.Text);
+
+            }
+            else if (rdc_seach_date.Checked == true)
+            {
+                dgv_HDxuat.DataSource = seach_hd_xuat_date("tp_search_ngayXuat", "@ThoiGianA", "@ThoiGianB", date_A.Value.ToString(), date_B.Value.ToString());
+            }
+            
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedTab == tabPage3)
+            {
+                dgv_HDxuat.Hide();
+                tabControl1.Size = new System.Drawing.Size(800, 434);
+                //crystalReportViewer1.ReportSource.Refresh();
+                crystalReportViewer1.RefreshReport();
+
+            }
+            else
+            {
+                dgv_HDxuat.Show();
+
+            }
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+
         }
     }
 }

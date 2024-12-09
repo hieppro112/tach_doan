@@ -138,9 +138,9 @@ namespace doan_ver1._0
         {
             panel_HDxuat.Hide();
             panel_banner.Hide();
-            panel_xuathoadon.Hide();
             panel_main.Hide();
             panel_nhanvien_info.Show();
+            app_account.BackColor = System.Drawing.Color.Red;
 
         }
 
@@ -436,11 +436,15 @@ namespace doan_ver1._0
             
         }
 
+        private void doi_color_app()
+        {
+            
+        }
+
         private void app_SanPham_Click(object sender, EventArgs e)
         {
             panel_nhanvien_info.Hide();
             panel_banner.Hide();
-            panel_xuathoadon.Hide();
             panel_main.Show();
             hienthi_f_cuahang();
         }
@@ -466,7 +470,7 @@ namespace doan_ver1._0
         private void app_hoadon_Click(object sender, EventArgs e)
         {
             
-            panel_xuathoadon.Hide();
+
             panel_banner.Hide();
             panel_nhanvien_info.Hide();
             panel_main.Show(); 
@@ -492,6 +496,11 @@ namespace doan_ver1._0
             {
                 Application.Exit();
             }
+        }
+
+        private void panel_main_Click(object sender, EventArgs e)
+        {
+            app_account.BackColor = System.Drawing.Color.Red;
         }
 
 

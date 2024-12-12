@@ -57,20 +57,23 @@
             this.rdc_seach_date = new System.Windows.Forms.RadioButton();
             this.rdt_seach_manv = new System.Windows.Forms.RadioButton();
             this.rdt_seach_maHD = new System.Windows.Forms.RadioButton();
-            this.dgv_HDxuat = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.baocao_HD_xuat1 = new doan_ver1._0.baocao_HD_xuat();
+            this.dgv_HDxuat = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.date_seach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_HDxuat)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HDxuat)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -272,7 +275,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1113, 405);
+            this.tabPage2.Size = new System.Drawing.Size(1113, 200);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tìm kiếm";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -391,20 +394,6 @@
             this.rdt_seach_maHD.UseVisualStyleBackColor = true;
             this.rdt_seach_maHD.CheckedChanged += new System.EventHandler(this.rdbTimtheoma_CheckedChanged);
             // 
-            // dgv_HDxuat
-            // 
-            this.dgv_HDxuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_HDxuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HDxuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_HDxuat.Location = new System.Drawing.Point(0, 242);
-            this.dgv_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_HDxuat.Name = "dgv_HDxuat";
-            this.dgv_HDxuat.RowHeadersWidth = 51;
-            this.dgv_HDxuat.RowTemplate.Height = 24;
-            this.dgv_HDxuat.Size = new System.Drawing.Size(1128, 216);
-            this.dgv_HDxuat.TabIndex = 17;
-            this.dgv_HDxuat.Click += new System.EventHandler(this.dgv_HDxuat_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.crystalReportViewer1);
@@ -427,6 +416,20 @@
             this.crystalReportViewer1.Size = new System.Drawing.Size(1113, 200);
             this.crystalReportViewer1.TabIndex = 0;
             // 
+            // dgv_HDxuat
+            // 
+            this.dgv_HDxuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HDxuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HDxuat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_HDxuat.Location = new System.Drawing.Point(0, 242);
+            this.dgv_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_HDxuat.Name = "dgv_HDxuat";
+            this.dgv_HDxuat.RowHeadersWidth = 51;
+            this.dgv_HDxuat.RowTemplate.Height = 24;
+            this.dgv_HDxuat.Size = new System.Drawing.Size(1128, 216);
+            this.dgv_HDxuat.TabIndex = 17;
+            this.dgv_HDxuat.Click += new System.EventHandler(this.dgv_HDxuat_Click);
+            // 
             // f_hoadonxuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,9 +448,9 @@
             this.tabPage2.PerformLayout();
             this.date_seach.ResumeLayout(false);
             this.date_seach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_HDxuat)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HDxuat)).EndInit();
             this.ResumeLayout(false);
 
         }

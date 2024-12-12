@@ -286,5 +286,10 @@ namespace doan_ver1._0
             txtDiachi.Text = dgvCuaHang1.Rows[dong].Cells[2].Value.ToString();
             txtSoDT.Text = dgvCuaHang1.Rows[dong].Cells[3].Value.ToString();
         }
+
+        private void f_cuahang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

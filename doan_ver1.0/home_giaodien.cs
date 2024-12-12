@@ -86,35 +86,7 @@ namespace doan_ver1._0
             }
             return null;
         }
-        //private void home_giaodien_Load(object sender, EventArgs e)
-        //{
-        //    table_info_accout.DataSource = loaddl_nhanvien();
-        //    table_info_accout.DefaultCellStyle.ForeColor = Color.Black;
-        //    dataGV_sanPham.DataSource = loaddl_SanPham();
-        //    dataGV_sanPham.DefaultCellStyle.ForeColor = Color.Black;
-        //    data_GV_timKiem.DataSource = loaddl_SanPham();
-        //    data_GV_timKiem.DefaultCellStyle.ForeColor = Color.Black;
-        //    dgv_HDxuat.DataSource = loaddl_HDxuat();
-        //    dgv_HDxuat.DefaultCellStyle.ForeColor = Color.Black;
-        //    dgv_nhanvien.DataSource = loaddl_nhanvien();
-        //    dgv_nhanvien.DefaultCellStyle.ForeColor = Color.Black;
-        //    cb_seach_nhanvien.SelectedIndex = 0;
-        //    panel_nhanvien_info.Hide();
-        //    dgvCuaHang1.DataSource = loaddl_cuahan();
-        //    dgvCuaHang1.DefaultCellStyle.ForeColor = Color.Black;
-        //    dgvTimKiem.DefaultCellStyle.ForeColor = Color.Black;
-
-        //    load_first();
-
-        //}
-        //private void load_first()
-        //{
-        //    panel_nhanvien_info.Hide();
-        //    pannel_cuahang.Hide();
-        //    panel_sanpham.Hide();
-        //    panel_xuathoadon.Hide();
-        //    panel_banner.Show();
-        //}
+       
         private void table_info_accout_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             List<string> l = new List<string>();
@@ -141,7 +113,7 @@ namespace doan_ver1._0
             panel_main.Hide();
             panel_nhanvien_info.Show();
             app_account.BackColor = System.Drawing.Color.Red;
-
+            txt_title.Text = "Quản lý các tài khoản";
         }
 
 
@@ -443,10 +415,23 @@ namespace doan_ver1._0
 
         private void app_SanPham_Click(object sender, EventArgs e)
         {
-            panel_nhanvien_info.Hide();
             panel_banner.Hide();
+            panel_nhanvien_info.Hide();
             panel_main.Show();
-            hienthi_f_cuahang();
+            hienthi_f_sanpham();
+            txt_title.Text = "Quản lý sản phẩm nhập";
+
+        }
+        
+        private void hienthi_f_sanpham()
+        {
+            f_sanpham f_cuahang = new f_sanpham();
+            f_cuahang.TopLevel = false;
+            f_cuahang.FormBorderStyle = FormBorderStyle.None;
+            f_cuahang.Dock = DockStyle.Fill;
+            panel_main.Controls.Clear();
+            panel_main.Controls.Add(f_cuahang);
+            f_cuahang.Show();
         }
 
         private void hienthi_f_cuahang()
@@ -475,6 +460,7 @@ namespace doan_ver1._0
             panel_nhanvien_info.Hide();
             panel_main.Show(); 
             hienthi_f_xuatHD();
+            txt_title.Text = "Xuất hàng";
         }
         private void hienthi_f_xuatHD()
         {
@@ -501,6 +487,49 @@ namespace doan_ver1._0
         private void panel_main_Click(object sender, EventArgs e)
         {
             app_account.BackColor = System.Drawing.Color.Red;
+        }
+
+        private void home_giaodien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void home_giaodien_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+        "Bạn có chắc chắn muốn thoát không?",
+        "Xác nhận thoát",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    );
+
+            // Nếu người dùng chọn "No", hủy sự kiện đóng form
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void app_cuahang_Click(object sender, EventArgs e)
+        {
+            panel_nhanvien_info.Hide();
+            panel_banner.Hide();
+            panel_main.Show();
+            hienthi_f_cuahang();
+            txt_title.Text = "Quản lý cửa hàng";
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            panel_nhanvien_info.Hide();
+            panel_banner.Show();
+            panel_main.Hide();
+            txt_title.Text = "";
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
 

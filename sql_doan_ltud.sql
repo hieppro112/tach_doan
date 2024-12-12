@@ -359,6 +359,35 @@ BEGIN
 END;
 
 
+	CREATE PROCEDURE UpdateSoLuongSanPham
+    @MaSanPham nvarchar(50),
+    @SoLuongBan INT
+AS
+BEGIN
+    -- Kiểm tra số lượng tồn kho
+    IF EXISTS (SELECT 1 FROM SanPham WHERE MaSanPham = @MaSanPham AND SoLuong >= @SoLuongBan)
+    BEGIN
+        -- Trừ số lượng sản phẩm
+        UPDATE SanPham
+        SET SoLuong = SoLuong - @SoLuongBan
+        WHERE MaSanPham = @MaSanPham;
+
+        -- Trả về kết quả thành công
+        PRINT 'Xuất hóa đơn thành công!';
+    END
+    ELSE
+    BEGIN
+        -- Thông báo không đủ hàng để bán
+        PRINT 'Không đủ số lượng để bán!';
+        RETURN;
+    END
+END;
+
+
+
+	select * from CuaHang
+	select * from SanPham
+	exec UpdateSoLuongSanPham'SP001','2'
 	exec tp_search_ngayXuat '1/01/2000','12/09/2000'
 	exec tp_seach_maNV'4'
 	exec tp_xemHD

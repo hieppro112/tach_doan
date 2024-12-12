@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace doan_ver1._0
@@ -57,9 +58,18 @@ namespace doan_ver1._0
         }
         private void btnThem_hdxuat_Click(object sender, EventArgs e)
         {
+            updatesp();
+            //them_HD();
+            dgv_HDxuat.DataSource = loaddl_HDxuat();
+        }
+        private void them_HD()
+        {
             try
             {
-                connect.Open();
+                if(connect.State == System.Data.ConnectionState.Closed)
+                {
+                    connect.Open();
+                }
                 SqlCommand cmd = new SqlCommand("them_HDxuat", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -87,15 +97,32 @@ namespace doan_ver1._0
                 }
 
             }
+            catch (SqlException sql)
+            {
+                if (sql.Number == 2627)
+                {
+                    MessageBox.Show("mã hóa đơn đã tồn tại !");
+                }
+                else if (sql.Number == 547)
+                {
+                    MessageBox.Show("kiểm tra lại mã cửa hàng, sản phẩm,mã nhân viên không tồn tại!");
+                }
+                else
+                {
+                    MessageBox.Show(sql.Number.ToString());
+                }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally
             {
-                connect.Close();
+                if (connect.State == System.Data.ConnectionState.Open)
+                {
+                    connect.Close();
+                }
             }
-            dgv_HDxuat.DataSource = loaddl_HDxuat();
         }
 
         private void dgv_HDxuat_Click(object sender, EventArgs e)
@@ -320,6 +347,7 @@ namespace doan_ver1._0
                 //crystalReportViewer1.ReportSource.Refresh();
                 crystalReportViewer1.RefreshReport();
 
+                crystalReportViewer1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             }
             else
             {
@@ -332,5 +360,45 @@ namespace doan_ver1._0
         {
 
         }
+        private void updatesp()
+        {
+            try
+            {
+                connect.Open();
+
+                // Gọi Stored Procedure
+                SqlCommand cmd = new SqlCommand("UpdateSoLuongSanPham", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số cho Stored Procedure
+                cmd.Parameters.AddWithValue("@MaSanPham", txt_mSP_cuahang_HDxuat.Text);
+                cmd.Parameters.AddWithValue("@SoLuongBan", txt_soluong_cuahang_HDxuat.Text);
+
+                // Thực thi Stored Procedure
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                   
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Không đủ số lượng để bán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect?.Close();
+            }
+            dgv_HDxuat.DataSource = loaddl_HDxuat();
+        }
     }
 }
+    

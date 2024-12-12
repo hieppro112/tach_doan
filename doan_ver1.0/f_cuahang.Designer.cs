@@ -64,7 +64,10 @@
             // 
             // pannel_cuahang
             // 
-            this.pannel_cuahang.BackColor = System.Drawing.Color.IndianRed;
+            this.pannel_cuahang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pannel_cuahang.BackColor = System.Drawing.Color.Transparent;
             this.pannel_cuahang.Controls.Add(this.control_cuahang);
             this.pannel_cuahang.Location = new System.Drawing.Point(12, 12);
             this.pannel_cuahang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -74,6 +77,9 @@
             // 
             // control_cuahang
             // 
+            this.control_cuahang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.control_cuahang.Controls.Add(this.tabPage5);
             this.control_cuahang.Controls.Add(this.tabPage6);
             this.control_cuahang.Location = new System.Drawing.Point(5, 5);
@@ -109,9 +115,11 @@
             // 
             // dgvCuaHang1
             // 
+            this.dgvCuaHang1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCuaHang1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCuaHang1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCuaHang1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCuaHang1.Location = new System.Drawing.Point(3, 262);
             this.dgvCuaHang1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvCuaHang1.Name = "dgvCuaHang1";
@@ -377,6 +385,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "f_cuahang";
             this.Text = "f_cuahang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.f_cuahang_FormClosing);
             this.Load += new System.EventHandler(this.f_cuahang_Load);
             this.pannel_cuahang.ResumeLayout(false);
             this.control_cuahang.ResumeLayout(false);

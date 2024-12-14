@@ -347,7 +347,7 @@ namespace doan_ver1._0
                 //crystalReportViewer1.ReportSource.Refresh();
                 crystalReportViewer1.RefreshReport();
 
-                crystalReportViewer1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+               
             }
             else
             {

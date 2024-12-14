@@ -91,6 +91,7 @@
             this.control_cuahang.SelectedIndex = 0;
             this.control_cuahang.Size = new System.Drawing.Size(1112, 441);
             this.control_cuahang.TabIndex = 0;
+            this.control_cuahang.SelectedIndexChanged += new System.EventHandler(this.control_cuahang_SelectedIndexChanged_1);
             // 
             // tabPage5
             // 
@@ -269,7 +270,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabPage6.Size = new System.Drawing.Size(1085, 412);
+            this.tabPage6.Size = new System.Drawing.Size(1104, 412);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Tìm kiếm";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -284,7 +285,7 @@
             this.dgvTimKiem.Name = "dgvTimKiem";
             this.dgvTimKiem.RowHeadersWidth = 51;
             this.dgvTimKiem.RowTemplate.Height = 24;
-            this.dgvTimKiem.Size = new System.Drawing.Size(1077, 228);
+            this.dgvTimKiem.Size = new System.Drawing.Size(1096, 228);
             this.dgvTimKiem.TabIndex = 12;
             // 
             // btnTimkiem
@@ -380,7 +381,7 @@
             this.tabPage1.Controls.Add(this.crystalReportViewer1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1085, 412);
+            this.tabPage1.Size = new System.Drawing.Size(1104, 412);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Báo Cáo";
             this.tabPage1.UseVisualStyleBackColor = true;

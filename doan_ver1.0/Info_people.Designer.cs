@@ -45,6 +45,7 @@
             this.btn_thoat = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.cb_vaitro = new System.Windows.Forms.ComboBox();
+            this.btn_report_people = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -167,7 +168,7 @@
             // 
             // btn_luu
             // 
-            this.btn_luu.Location = new System.Drawing.Point(138, 338);
+            this.btn_luu.Location = new System.Drawing.Point(79, 338);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(102, 53);
             this.btn_luu.TabIndex = 14;
@@ -177,7 +178,7 @@
             // 
             // btn_thoat
             // 
-            this.btn_thoat.Location = new System.Drawing.Point(424, 338);
+            this.btn_thoat.Location = new System.Drawing.Point(365, 338);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(102, 53);
             this.btn_thoat.TabIndex = 14;
@@ -187,7 +188,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(276, 338);
+            this.btn_xoa.Location = new System.Drawing.Point(217, 338);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(102, 53);
             this.btn_xoa.TabIndex = 14;
@@ -206,6 +207,16 @@
             this.cb_vaitro.Size = new System.Drawing.Size(121, 24);
             this.cb_vaitro.TabIndex = 15;
             // 
+            // btn_report_people
+            // 
+            this.btn_report_people.Location = new System.Drawing.Point(505, 338);
+            this.btn_report_people.Name = "btn_report_people";
+            this.btn_report_people.Size = new System.Drawing.Size(102, 53);
+            this.btn_report_people.TabIndex = 14;
+            this.btn_report_people.Text = "In";
+            this.btn_report_people.UseVisualStyleBackColor = true;
+            this.btn_report_people.Click += new System.EventHandler(this.btn_thoat_Click);
+            // 
             // Info_people
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,6 +224,7 @@
             this.ClientSize = new System.Drawing.Size(641, 460);
             this.Controls.Add(this.cb_vaitro);
             this.Controls.Add(this.btn_xoa);
+            this.Controls.Add(this.btn_report_people);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.date_ngaytao);
@@ -255,5 +267,6 @@
         private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.ComboBox cb_vaitro;
+        private System.Windows.Forms.Button btn_report_people;
     }
 }

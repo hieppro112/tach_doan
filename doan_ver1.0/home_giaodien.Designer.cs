@@ -44,7 +44,8 @@
             this.table_info_accout = new System.Windows.Forms.DataGridView();
             this.panel_HDxuat = new System.Windows.Forms.Panel();
             this.panel_banner = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txt_title_baner = new System.Windows.Forms.Label();
+            this.txt_content_baner = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel_taikhoan = new System.Windows.Forms.Panel();
@@ -88,7 +89,6 @@
             this.app_account = new System.Windows.Forms.Panel();
             this.pic_account = new System.Windows.Forms.PictureBox();
             this.txt_account = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.control_HDxuat.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach_HDxuat)).BeginInit();
@@ -273,8 +273,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_banner.BackColor = System.Drawing.Color.White;
-            this.panel_banner.Controls.Add(this.label1);
-            this.panel_banner.Controls.Add(this.label3);
+            this.panel_banner.Controls.Add(this.txt_title_baner);
+            this.panel_banner.Controls.Add(this.txt_content_baner);
             this.panel_banner.Controls.Add(this.pictureBox8);
             this.panel_banner.Location = new System.Drawing.Point(331, 49);
             this.panel_banner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -282,20 +282,30 @@
             this.panel_banner.Size = new System.Drawing.Size(1269, 577);
             this.panel_banner.TabIndex = 0;
             // 
-            // label3
+            // txt_title_baner
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_title_baner.AutoSize = true;
+            this.txt_title_baner.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_title_baner.ForeColor = System.Drawing.Color.Black;
+            this.txt_title_baner.Location = new System.Drawing.Point(402, 38);
+            this.txt_title_baner.Name = "txt_title_baner";
+            this.txt_title_baner.Size = new System.Drawing.Size(475, 32);
+            this.txt_title_baner.TabIndex = 3;
+            this.txt_title_baner.Text = "Phần mềm quản lý Khoa điện máy";
+            // 
+            // txt_content_baner
+            // 
+            this.txt_content_baner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(643, 500);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 32);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Công Ty HTD";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.txt_content_baner.AutoSize = true;
+            this.txt_content_baner.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_content_baner.ForeColor = System.Drawing.Color.Black;
+            this.txt_content_baner.Location = new System.Drawing.Point(576, 479);
+            this.txt_content_baner.Name = "txt_content_baner";
+            this.txt_content_baner.Size = new System.Drawing.Size(195, 32);
+            this.txt_content_baner.TabIndex = 2;
+            this.txt_content_baner.Text = "Công Ty HTD";
+            this.txt_content_baner.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox8
             // 
@@ -303,7 +313,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(475, 137);
+            this.pictureBox8.Location = new System.Drawing.Point(414, 127);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(463, 326);
@@ -593,7 +603,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel_main.Location = new System.Drawing.Point(327, 46);
-            this.panel_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1275, 581);
             this.panel_main.TabIndex = 1;
@@ -852,20 +862,6 @@
             this.txt_account.MouseEnter += new System.EventHandler(this.app_account_MouseEnter);
             this.txt_account.MouseLeave += new System.EventHandler(this.app_account_MouseLeave);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(483, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(475, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Phần mềm quản lý Khoa điện máy";
-            // 
             // home_giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -884,6 +880,7 @@
             this.Text = "uo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.home_giaodien_FormClosing_1);
             this.Load += new System.EventHandler(this.home_giaodien_Load);
+            this.Resize += new System.EventHandler(this.home_giaodien_Resize);
             this.control_HDxuat.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -975,7 +972,7 @@
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label txt_content_baner;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel app_logout;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -995,6 +992,6 @@
         private System.Windows.Forms.Panel app_account;
         private System.Windows.Forms.PictureBox pic_account;
         private System.Windows.Forms.Label txt_account;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt_title_baner;
     }
 }

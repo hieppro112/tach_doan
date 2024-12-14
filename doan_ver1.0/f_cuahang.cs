@@ -301,11 +301,16 @@ namespace doan_ver1._0
 
         private void tabPage5_Click(object sender, EventArgs e)
         {
-            if(control_cuahang.SelectedTab == tabPage5)
+           
+        }
+
+        private void control_cuahang_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (control_cuahang.SelectedTab == tabPage5)
             {
                 dgvCuaHang1.DataSource = loaddl_cuahan();
             }
-            if(control_cuahang.SelectedTab == tabPage5)
+            if (control_cuahang.SelectedTab == tabPage1)
             {
                 crystalReportViewer1.RefreshReport();
             }

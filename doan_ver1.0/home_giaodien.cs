@@ -595,6 +595,13 @@ namespace doan_ver1._0
             txt_logout.ForeColor = Color.DarkGray;
         }
 
+        private void home_giaodien_Resize(object sender, EventArgs e)
+        {
+            txt_title_baner.Left = (this.ClientSize.Width - txt_title_baner.Width) / 2;
+            txt_content_baner.Left = (this.ClientSize.Width - txt_title_baner.Width) / 2;
+
+        }
+
 
 
 

@@ -105,6 +105,12 @@
     <Compile Include="home_giaodien.Designer.cs">
       <DependentUpon>home_giaodien.cs</DependentUpon>
     </Compile>
+    <Compile Include="InCuaHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InCuaHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Info_people.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="home_giaodien.resx">
       <DependentUpon>home_giaodien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InCuaHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InCuaHang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Info_people.resx">
       <DependentUpon>Info_people.cs</DependentUpon>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace doan_ver1._0
         }
         // SqlConnection connect = new SqlConnection("Data Source=LAPTOP-BA92BEJG\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
         SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
-
+        //SqlConnection connect = new SqlConnection("Data Source=LAPTOP-BA92BEJG\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
         private DataTable loaddl_cuahan()
         {
             DataTable table = new DataTable();
@@ -82,10 +83,12 @@ namespace doan_ver1._0
                     MessageBox.Show("Them cua hang that bai");
                 }
             }
+           
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+           
             finally
             {
                 connect.Close();
@@ -93,10 +96,6 @@ namespace doan_ver1._0
             dgvCuaHang1.DataSource = loaddl_cuahan();
         }
 
-        private void dgvCuaHang1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {        
-                         
-        }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -122,6 +121,19 @@ namespace doan_ver1._0
                     MessageBox.Show("Xoa cua hang that bai");
                 }
             }
+            catch (SqlException sql)
+            {
+
+                if (sql.Number == 547)
+                {
+                    MessageBox.Show("Mã hóa đơn đã tồn tại !");
+                }
+                else
+                {
+                    MessageBox.Show(sql.Number.ToString());
+                }
+            }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -179,6 +191,7 @@ namespace doan_ver1._0
             dgvCuaHang1.DataSource = loaddl_cuahan();
         }
 
+
         private void btnLammoi1_Click(object sender, EventArgs e)
         {
             txtMaCH.Clear();
@@ -189,11 +202,6 @@ namespace doan_ver1._0
             dgvCuaHang1.DataSource = loaddl_cuahan();
 
             MessageBox.Show("Dữ liệu đã được làm mới! ");
-        }
-
-        private void txtMaCH_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void rdbTimtheoma_CheckedChanged(object sender, EventArgs e)
@@ -272,12 +280,6 @@ namespace doan_ver1._0
                 connect.Close();
             }
         }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvCuaHang1_Click(object sender, EventArgs e)
         {
             int dong = dgvCuaHang1.CurrentCell.RowIndex;
@@ -287,9 +289,26 @@ namespace doan_ver1._0
             txtSoDT.Text = dgvCuaHang1.Rows[dong].Cells[3].Value.ToString();
         }
 
-        private void f_cuahang_FormClosing(object sender, FormClosingEventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void control_cuahang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+            if(control_cuahang.SelectedTab == tabPage5)
+            {
+                dgvCuaHang1.DataSource = loaddl_cuahan();
+            }
+            if(control_cuahang.SelectedTab == tabPage5)
+            {
+                crystalReportViewer1.RefreshReport();
+            }
         }
     }
 }

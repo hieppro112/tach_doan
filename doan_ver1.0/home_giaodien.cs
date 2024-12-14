@@ -532,6 +532,71 @@ namespace doan_ver1._0
 
         }
 
+        private void app_account_MouseEnter(object sender, EventArgs e)
+        {
+            app_account.BackColor = Color.DarkGray;
+            txt_account.ForeColor = Color.Black;
+
+        }
+
+        private void app_account_MouseLeave(object sender, EventArgs e)
+        {
+            app_account.BackColor = Color.Black;
+            txt_account.ForeColor = Color.DarkGray;
+        }
+
+        private void app_cuahang_MouseEnter(object sender, EventArgs e)
+        {
+            app_cuahang.BackColor = Color.DarkGray;
+            txt_cuahang.ForeColor = Color.Black;
+        }
+
+        private void app_cuahang_MouseLeave(object sender, EventArgs e)
+        {
+            app_cuahang.BackColor = Color.Black;
+            txt_cuahang.ForeColor = Color.DarkGray;
+        }
+
+        private void app_SanPham_MouseEnter(object sender, EventArgs e)
+        {
+            app_SanPham.BackColor = Color.DarkGray;
+            txt_sanpham.ForeColor = Color.Black;
+        }
+
+        private void app_SanPham_MouseLeave(object sender, EventArgs e)
+        {
+            app_SanPham.BackColor = Color.Black;
+            txt_sanpham.ForeColor = Color.DarkGray;
+
+        }
+
+        private void app_hoadon_MouseEnter(object sender, EventArgs e)
+        {
+            app_hoadon.BackColor = Color.DarkGray;
+            txt_hoadon.ForeColor = Color.Black;
+        }
+
+        private void app_hoadon_MouseLeave(object sender, EventArgs e)
+        {
+            app_hoadon.BackColor = Color.Black;
+            txt_hoadon.ForeColor = Color.DarkGray;
+
+        }
+
+        private void app_logout_MouseEnter(object sender, EventArgs e)
+        {
+            app_logout.BackColor = Color.Red;
+
+        }
+
+        private void app_logout_MouseLeave(object sender, EventArgs e)
+        {
+            app_logout.BackColor = Color.Black;
+            txt_logout.ForeColor = Color.DarkGray;
+        }
+
+
+
 
         //private void btn_TK_timKiem_Click(object sender, EventArgs e)
         //{

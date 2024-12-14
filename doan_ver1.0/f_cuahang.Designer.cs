@@ -54,25 +54,27 @@
             this.rdbTimtheodc = new System.Windows.Forms.RadioButton();
             this.rdbTimtheoten = new System.Windows.Forms.RadioButton();
             this.rdbTimtheoma = new System.Windows.Forms.RadioButton();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.InCuaHang1 = new doan_ver1._0.InCuaHang();
             this.pannel_cuahang.SuspendLayout();
             this.control_cuahang.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuaHang1)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiem)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pannel_cuahang
             // 
-            this.pannel_cuahang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pannel_cuahang.BackColor = System.Drawing.Color.Transparent;
             this.pannel_cuahang.Controls.Add(this.control_cuahang);
-            this.pannel_cuahang.Location = new System.Drawing.Point(12, 12);
+            this.pannel_cuahang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pannel_cuahang.Location = new System.Drawing.Point(0, 0);
             this.pannel_cuahang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pannel_cuahang.Name = "pannel_cuahang";
-            this.pannel_cuahang.Size = new System.Drawing.Size(1101, 446);
+            this.pannel_cuahang.Size = new System.Drawing.Size(1120, 446);
             this.pannel_cuahang.TabIndex = 20;
             // 
             // control_cuahang
@@ -82,11 +84,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.control_cuahang.Controls.Add(this.tabPage5);
             this.control_cuahang.Controls.Add(this.tabPage6);
+            this.control_cuahang.Controls.Add(this.tabPage1);
             this.control_cuahang.Location = new System.Drawing.Point(5, 5);
             this.control_cuahang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.control_cuahang.Name = "control_cuahang";
             this.control_cuahang.SelectedIndex = 0;
-            this.control_cuahang.Size = new System.Drawing.Size(1093, 441);
+            this.control_cuahang.Size = new System.Drawing.Size(1112, 441);
             this.control_cuahang.TabIndex = 0;
             // 
             // tabPage5
@@ -108,26 +111,23 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage5.Size = new System.Drawing.Size(1085, 412);
+            this.tabPage5.Size = new System.Drawing.Size(1104, 412);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Cửa Hàng";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // dgvCuaHang1
             // 
-            this.dgvCuaHang1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCuaHang1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCuaHang1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuaHang1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCuaHang1.Location = new System.Drawing.Point(3, 262);
             this.dgvCuaHang1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvCuaHang1.Name = "dgvCuaHang1";
             this.dgvCuaHang1.RowHeadersWidth = 51;
             this.dgvCuaHang1.RowTemplate.Height = 24;
-            this.dgvCuaHang1.Size = new System.Drawing.Size(1079, 148);
+            this.dgvCuaHang1.Size = new System.Drawing.Size(1098, 148);
             this.dgvCuaHang1.TabIndex = 30;
-            this.dgvCuaHang1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuaHang1_CellContentClick);
             this.dgvCuaHang1.Click += new System.EventHandler(this.dgvCuaHang1_Click);
             // 
             // txtTenCH
@@ -161,7 +161,6 @@
             this.txtMaCH.Name = "txtMaCH";
             this.txtMaCH.Size = new System.Drawing.Size(143, 22);
             this.txtMaCH.TabIndex = 29;
-            this.txtMaCH.TextChanged += new System.EventHandler(this.txtMaCH_TextChanged);
             // 
             // btnLammoi1
             // 
@@ -376,6 +375,31 @@
             this.rdbTimtheoma.UseVisualStyleBackColor = true;
             this.rdbTimtheoma.CheckedChanged += new System.EventHandler(this.rdbTimtheoma_CheckedChanged);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.crystalReportViewer1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1085, 412);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Báo Cáo";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.InCuaHang1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1077, 407);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
             // f_cuahang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -385,7 +409,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "f_cuahang";
             this.Text = "f_cuahang";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.f_cuahang_FormClosing);
             this.Load += new System.EventHandler(this.f_cuahang_Load);
             this.pannel_cuahang.ResumeLayout(false);
             this.control_cuahang.ResumeLayout(false);
@@ -395,6 +418,7 @@
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiem)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -427,5 +451,9 @@
         private System.Windows.Forms.RadioButton rdbTimtheodc;
         private System.Windows.Forms.RadioButton rdbTimtheoten;
         private System.Windows.Forms.RadioButton rdbTimtheoma;
+        private System.Windows.Forms.TabPage tabPage1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private InCuaHang InCuaHang1;
+        //private InCuaHang InCuaHang1;
     }
 }

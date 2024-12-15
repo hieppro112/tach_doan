@@ -602,6 +602,19 @@ namespace doan_ver1._0
 
         }
 
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl2.SelectedTab == tab_report_nhanvien)
+            {
+                dgv_nhanvien.Hide();
+                crystalReportViewer1.RefreshReport();
+            }
+            else
+            {
+                dgv_nhanvien.Show();
+            }
+        }
+
 
 
 

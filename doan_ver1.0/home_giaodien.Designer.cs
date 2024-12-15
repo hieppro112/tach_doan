@@ -67,16 +67,12 @@
             this.cb_seach_nhanvien = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_seach_nhanvien = new System.Windows.Forms.TextBox();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
+            this.tab_report_nhanvien = new System.Windows.Forms.TabPage();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.app_logout = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txt_logout = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.app_hoadon = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txt_hoadon = new System.Windows.Forms.Label();
@@ -89,6 +85,8 @@
             this.app_account = new System.Windows.Forms.Panel();
             this.pic_account = new System.Windows.Forms.PictureBox();
             this.txt_account = new System.Windows.Forms.Label();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.InNhanVien1 = new doan_ver1._0.InNhanVien();
             this.control_HDxuat.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach_HDxuat)).BeginInit();
@@ -109,12 +107,10 @@
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach_nhanvien)).BeginInit();
-            this.tabPage10.SuspendLayout();
+            this.tab_report_nhanvien.SuspendLayout();
             this.panel1.SuspendLayout();
             this.app_logout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.app_hoadon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.app_SanPham.SuspendLayout();
@@ -323,7 +319,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pictureBox7.BackColor = System.Drawing.Color.Black;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(11, 15);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -467,29 +463,28 @@
             this.dgv_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nhanvien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_nhanvien.Location = new System.Drawing.Point(0, 348);
+            this.dgv_nhanvien.Location = new System.Drawing.Point(0, 199);
             this.dgv_nhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_nhanvien.Name = "dgv_nhanvien";
             this.dgv_nhanvien.ReadOnly = true;
             this.dgv_nhanvien.RowHeadersWidth = 51;
             this.dgv_nhanvien.RowTemplate.Height = 24;
-            this.dgv_nhanvien.Size = new System.Drawing.Size(1269, 230);
+            this.dgv_nhanvien.Size = new System.Drawing.Size(1269, 379);
             this.dgv_nhanvien.TabIndex = 7;
             this.dgv_nhanvien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_info_accout_CellDoubleClick);
             // 
             // tabControl2
             // 
-            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage9);
-            this.tabControl2.Controls.Add(this.tabPage10);
-            this.tabControl2.Location = new System.Drawing.Point(17, 14);
+            this.tabControl2.Controls.Add(this.tab_report_nhanvien);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1239, 314);
+            this.tabControl2.Size = new System.Drawing.Size(1269, 578);
             this.tabControl2.TabIndex = 6;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
             // tabPage9
             // 
@@ -502,7 +497,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage9.Size = new System.Drawing.Size(1231, 285);
+            this.tabPage9.Size = new System.Drawing.Size(1261, 549);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "Tài Khoản";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -574,27 +569,17 @@
             this.txt_seach_nhanvien.Size = new System.Drawing.Size(197, 22);
             this.txt_seach_nhanvien.TabIndex = 13;
             // 
-            // tabPage10
+            // tab_report_nhanvien
             // 
-            this.tabPage10.Controls.Add(this.label18);
-            this.tabPage10.Location = new System.Drawing.Point(4, 25);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage10.Size = new System.Drawing.Size(1231, 285);
-            this.tabPage10.TabIndex = 1;
-            this.tabPage10.Text = "Nhân viên";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(133, 59);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "helloo";
+            this.tab_report_nhanvien.Controls.Add(this.crystalReportViewer1);
+            this.tab_report_nhanvien.Location = new System.Drawing.Point(4, 25);
+            this.tab_report_nhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tab_report_nhanvien.Name = "tab_report_nhanvien";
+            this.tab_report_nhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tab_report_nhanvien.Size = new System.Drawing.Size(1261, 549);
+            this.tab_report_nhanvien.TabIndex = 1;
+            this.tab_report_nhanvien.Text = "Báo cáo";
+            this.tab_report_nhanvien.UseVisualStyleBackColor = true;
             // 
             // panel_main
             // 
@@ -614,7 +599,6 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.app_logout);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.app_hoadon);
             this.panel1.Controls.Add(this.app_SanPham);
             this.panel1.Controls.Add(this.app_cuahang);
@@ -663,39 +647,6 @@
             this.txt_logout.Text = "Đăng Xuất";
             this.txt_logout.MouseEnter += new System.EventHandler(this.app_logout_MouseEnter);
             this.txt_logout.MouseLeave += new System.EventHandler(this.app_logout_MouseLeave);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(3, 484);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(293, 62);
-            this.panel6.TabIndex = 5;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::doan_ver1._0.Properties.Resources.profile;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(72, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(69, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Quản lý tài khoản";
             // 
             // app_hoadon
             // 
@@ -862,16 +813,28 @@
             this.txt_account.MouseEnter += new System.EventHandler(this.app_account_MouseEnter);
             this.txt_account.MouseLeave += new System.EventHandler(this.app_account_MouseLeave);
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 2);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.InNhanVien1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1255, 545);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
             // home_giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1605, 667);
+            this.Controls.Add(this.panel_banner);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txt_title);
             this.Controls.Add(this.panel_HDxuat);
-            this.Controls.Add(this.panel_banner);
             this.Controls.Add(this.panel_nhanvien_info);
             this.Controls.Add(this.panel_main);
             this.ForeColor = System.Drawing.Color.White;
@@ -907,15 +870,11 @@
             this.tabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach_nhanvien)).EndInit();
-            this.tabPage10.ResumeLayout(false);
-            this.tabPage10.PerformLayout();
+            this.tab_report_nhanvien.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.app_logout.ResumeLayout(false);
             this.app_logout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.app_hoadon.ResumeLayout(false);
             this.app_hoadon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -966,8 +925,7 @@
         private System.Windows.Forms.ComboBox cb_seach_nhanvien;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_seach_nhanvien;
-        private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TabPage tab_report_nhanvien;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -977,9 +935,6 @@
         private System.Windows.Forms.Panel app_logout;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label txt_logout;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel app_hoadon;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label txt_hoadon;
@@ -993,5 +948,7 @@
         private System.Windows.Forms.PictureBox pic_account;
         private System.Windows.Forms.Label txt_account;
         private System.Windows.Forms.Label txt_title_baner;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private InNhanVien InNhanVien1;
     }
 }

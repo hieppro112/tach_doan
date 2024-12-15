@@ -34,6 +34,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btn_sua_HDxuat = new System.Windows.Forms.Button();
             this.btn_xoa_HDxuat = new System.Windows.Forms.Button();
+            this.btn_report_HDxuat = new System.Windows.Forms.Button();
             this.btn_xuathang = new System.Windows.Forms.Button();
             this.txt_soluong_cuahang_HDxuat = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -76,7 +77,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1128, 458);
@@ -90,6 +91,7 @@
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.btn_sua_HDxuat);
             this.tabPage1.Controls.Add(this.btn_xoa_HDxuat);
+            this.tabPage1.Controls.Add(this.btn_report_HDxuat);
             this.tabPage1.Controls.Add(this.btn_xuathang);
             this.tabPage1.Controls.Add(this.txt_soluong_cuahang_HDxuat);
             this.tabPage1.Controls.Add(this.label17);
@@ -102,10 +104,10 @@
             this.tabPage1.Controls.Add(this.txt_maHDxuat);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1113, 200);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1120, 429);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hóa Đơn";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -151,6 +153,18 @@
             this.btn_xoa_HDxuat.Text = "Xóa HD";
             this.btn_xoa_HDxuat.UseVisualStyleBackColor = false;
             this.btn_xoa_HDxuat.Click += new System.EventHandler(this.btn_xoa_HDxuat_Click);
+            // 
+            // btn_report_HDxuat
+            // 
+            this.btn_report_HDxuat.BackColor = System.Drawing.Color.RosyBrown;
+            this.btn_report_HDxuat.Location = new System.Drawing.Point(791, 87);
+            this.btn_report_HDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_report_HDxuat.Name = "btn_report_HDxuat";
+            this.btn_report_HDxuat.Size = new System.Drawing.Size(113, 57);
+            this.btn_report_HDxuat.TabIndex = 27;
+            this.btn_report_HDxuat.Text = "In";
+            this.btn_report_HDxuat.UseVisualStyleBackColor = false;
+            this.btn_report_HDxuat.Click += new System.EventHandler(this.btn_report_HDxuat_Click);
             // 
             // btn_xuathang
             // 
@@ -270,10 +284,10 @@
             this.tabPage2.Controls.Add(this.rdt_seach_manv);
             this.tabPage2.Controls.Add(this.rdt_seach_maHD);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1113, 200);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1120, 429);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tìm kiếm";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -440,7 +454,7 @@
             this.ClientSize = new System.Drawing.Size(1128, 458);
             this.Controls.Add(this.dgv_HDxuat);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "f_hoadonxuat";
             this.Text = "du";
             this.Load += new System.EventHandler(this.f_hoadonxuat_Load);
@@ -493,5 +507,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private baocao_HD_xuat baocao_HD_xuat1;
+        private System.Windows.Forms.Button btn_report_HDxuat;
     }
 }

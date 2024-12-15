@@ -380,9 +380,6 @@ namespace doan_ver1._0
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                   
-                   
                 }
                 else
                 {
@@ -398,6 +395,13 @@ namespace doan_ver1._0
                 connect?.Close();
             }
             dgv_HDxuat.DataSource = loaddl_HDxuat();
+        }
+
+        private void btn_report_HDxuat_Click(object sender, EventArgs e)
+        {
+            string maHD = txt_maHDxuat.Text;
+            form_report_hdxuat report = new form_report_hdxuat(maHD);
+            report.Show();
         }
     }
 }

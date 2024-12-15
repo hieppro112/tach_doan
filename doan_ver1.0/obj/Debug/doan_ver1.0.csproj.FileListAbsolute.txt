@@ -219,3 +219,4 @@ C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan - Copy (2)\tach_doan\do
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan - Copy (2)\tach_doan\doan_ver1.0\obj\Debug\doan_ver.B7330AA3.Up2Date
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan - Copy (2)\tach_doan\doan_ver1.0\obj\Debug\doan_ver1.0.exe
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan - Copy (2)\tach_doan\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
+C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan - Copy (2)\tach_doan\doan_ver1.0\obj\Debug\doan_ver1._0.form_report_hdxuat.resources

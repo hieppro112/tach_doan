@@ -14,7 +14,7 @@ namespace doan_ver1._0
     public partial class f_sanpham : Form
     {
         //SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
-        SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
+       SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
 
         public f_sanpham()
         {
@@ -180,6 +180,8 @@ namespace doan_ver1._0
                 txtSoLuong.Clear();
                 txtDonGia.Clear();
                 txtThanhTien.Clear();
+                cbDanhMuc_Sp.SelectedIndex = -1;
+
 
 
                 MessageBox.Show("Dữ liệu đã được làm mới!");
@@ -265,6 +267,21 @@ namespace doan_ver1._0
                 data_GV_timKiem.DefaultCellStyle.ForeColor = Color.Black;
                 dataHangTon.DataSource = LoadHangTonKho();
                 dataHangTon.DefaultCellStyle.ForeColor = Color.Black;
+
+                Color commonColor = ColorTranslator.FromHtml("#3498DB"); // Xanh dương
+                Color hoverColor = ColorTranslator.FromHtml("#2980B9"); // Xanh dương đậm hơn
+
+            Button[] buttons = { btnThem_Sp, btnXoa_Sp, btnCapNhat, btnLamMoi_Sp, btn_TK_timKiem, btn_TK_LamMoi };
+
+            foreach (Button btn in buttons)
+            {
+                btn.BackColor = commonColor;
+                btn.ForeColor = Color.White; 
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.MouseOverBackColor = hoverColor; 
+                btn.Cursor = Cursors.Hand; 
+            }
 
         }
 
@@ -480,5 +497,7 @@ namespace doan_ver1._0
         {
 
         }
+
+        
     }
 }

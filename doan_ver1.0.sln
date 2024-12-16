@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{203F7B6B-0294-4A24-8DE9-907C2D9CEBC1}"
 	ProjectSection(SolutionItems) = preProject
 		doan_ver1.0\InCuaHang.rpt = doan_ver1.0\InCuaHang.rpt
+		doan_ver1.0\XuatSP.rpt = doan_ver1.0\XuatSP.rpt
 	EndProjectSection
 EndProject
 Global

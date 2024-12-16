@@ -75,6 +75,12 @@
     <Compile Include="form_report_hdxuat.Designer.cs">
       <DependentUpon>form_report_hdxuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="form_thongtinSP_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_thongtinSP_Report.Designer.cs">
+      <DependentUpon>form_thongtinSP_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="f_cuahang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,12 @@
       <DependentUpon>report_maHD.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="XuatSP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XuatSP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="BaoCaoSP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BaoCaoSP.cs</LastGenOutput>
@@ -153,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_report_hdxuat.resx">
       <DependentUpon>form_report_hdxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_thongtinSP_Report.resx">
+      <DependentUpon>form_thongtinSP_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f_cuahang.resx">
       <DependentUpon>f_cuahang.cs</DependentUpon>
@@ -190,6 +205,10 @@
     <EmbeddedResource Include="report_maHD.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>report_maHD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuatSP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>XuatSP.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

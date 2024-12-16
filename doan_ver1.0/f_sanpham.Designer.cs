@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.thua = new System.Windows.Forms.TabPage();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dateNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -82,8 +82,9 @@
             this.BaoCaoSP2 = new doan_ver1._0.BaoCaoSP();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.BaoCaoSP1 = new doan_ver1._0.BaoCaoSP();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.thua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_sanPham)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_GV_timKiem)).BeginInit();
@@ -97,7 +98,7 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.thua);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -108,36 +109,37 @@
             this.tabControl1.TabIndex = 2;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage1
+            // thua
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.SteelBlue;
-            this.tabPage1.Controls.Add(this.btnCapNhat);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dateNgaySinh);
-            this.tabPage1.Controls.Add(this.cbDanhMuc_Sp);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.txtMa_sp);
-            this.tabPage1.Controls.Add(this.txtThanhTien);
-            this.tabPage1.Controls.Add(this.txtDonGia);
-            this.tabPage1.Controls.Add(this.txtSoLuong);
-            this.tabPage1.Controls.Add(this.txtTenSp);
-            this.tabPage1.Controls.Add(this.btnLamMoi_Sp);
-            this.tabPage1.Controls.Add(this.btnXoa_Sp);
-            this.tabPage1.Controls.Add(this.btnThem_Sp);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.dataGV_sanPham);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1181, 434);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Quản Lý Sản Phẩm";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.thua.BackColor = System.Drawing.Color.SteelBlue;
+            this.thua.Controls.Add(this.btnXuat);
+            this.thua.Controls.Add(this.btnCapNhat);
+            this.thua.Controls.Add(this.label1);
+            this.thua.Controls.Add(this.dateNgaySinh);
+            this.thua.Controls.Add(this.cbDanhMuc_Sp);
+            this.thua.Controls.Add(this.label13);
+            this.thua.Controls.Add(this.txtMa_sp);
+            this.thua.Controls.Add(this.txtThanhTien);
+            this.thua.Controls.Add(this.txtDonGia);
+            this.thua.Controls.Add(this.txtSoLuong);
+            this.thua.Controls.Add(this.txtTenSp);
+            this.thua.Controls.Add(this.btnLamMoi_Sp);
+            this.thua.Controls.Add(this.btnXoa_Sp);
+            this.thua.Controls.Add(this.btnThem_Sp);
+            this.thua.Controls.Add(this.label12);
+            this.thua.Controls.Add(this.label11);
+            this.thua.Controls.Add(this.label10);
+            this.thua.Controls.Add(this.label9);
+            this.thua.Controls.Add(this.label8);
+            this.thua.Controls.Add(this.dataGV_sanPham);
+            this.thua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thua.Location = new System.Drawing.Point(4, 25);
+            this.thua.Name = "thua";
+            this.thua.Padding = new System.Windows.Forms.Padding(3);
+            this.thua.Size = new System.Drawing.Size(1181, 434);
+            this.thua.TabIndex = 0;
+            this.thua.Text = "Quản Lý Sản Phẩm";
+            this.thua.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnCapNhat
             // 
@@ -205,6 +207,7 @@
             // 
             // txtThanhTien
             // 
+            this.txtThanhTien.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtThanhTien.Location = new System.Drawing.Point(580, 103);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.ReadOnly = true;
@@ -238,7 +241,7 @@
             this.btnLamMoi_Sp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLamMoi_Sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi_Sp.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnLamMoi_Sp.Location = new System.Drawing.Point(676, 165);
+            this.btnLamMoi_Sp.Location = new System.Drawing.Point(687, 165);
             this.btnLamMoi_Sp.Name = "btnLamMoi_Sp";
             this.btnLamMoi_Sp.Size = new System.Drawing.Size(158, 59);
             this.btnLamMoi_Sp.TabIndex = 31;
@@ -333,11 +336,11 @@
             this.dataGV_sanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGV_sanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGV_sanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGV_sanPham.Location = new System.Drawing.Point(3, 245);
+            this.dataGV_sanPham.Location = new System.Drawing.Point(3, 197);
             this.dataGV_sanPham.Name = "dataGV_sanPham";
             this.dataGV_sanPham.RowHeadersWidth = 51;
             this.dataGV_sanPham.RowTemplate.Height = 24;
-            this.dataGV_sanPham.Size = new System.Drawing.Size(1175, 186);
+            this.dataGV_sanPham.Size = new System.Drawing.Size(1175, 234);
             this.dataGV_sanPham.TabIndex = 18;
             this.dataGV_sanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_sanPham_CellContentClick);
             this.dataGV_sanPham.Click += new System.EventHandler(this.dataGV_sanPham_Click);
@@ -382,11 +385,11 @@
             this.data_GV_timKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_GV_timKiem.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.data_GV_timKiem.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.data_GV_timKiem.Location = new System.Drawing.Point(3, 227);
+            this.data_GV_timKiem.Location = new System.Drawing.Point(3, 169);
             this.data_GV_timKiem.Name = "data_GV_timKiem";
             this.data_GV_timKiem.RowHeadersWidth = 51;
             this.data_GV_timKiem.RowTemplate.Height = 24;
-            this.data_GV_timKiem.Size = new System.Drawing.Size(1175, 204);
+            this.data_GV_timKiem.Size = new System.Drawing.Size(1175, 262);
             this.data_GV_timKiem.TabIndex = 8;
             this.data_GV_timKiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_GV_timKiem_CellContentClick);
             this.data_GV_timKiem.Click += new System.EventHandler(this.btn_TK_LamMoi_Click);
@@ -687,6 +690,20 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // btnXuat
+            // 
+            this.btnXuat.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnXuat.Location = new System.Drawing.Point(916, 165);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(158, 59);
+            this.btnXuat.TabIndex = 38;
+            this.btnXuat.Text = "XUẤT";
+            this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // f_sanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -698,8 +715,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.f_sanpham_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.thua.ResumeLayout(false);
+            this.thua.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_sanPham)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -715,7 +732,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage thua;
         private System.Windows.Forms.ComboBox cbDanhMuc_Sp;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtMa_sp;
@@ -767,5 +784,6 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private BaoCaoSP BaoCaoSP1;
         private BaoCaoSP BaoCaoSP2;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

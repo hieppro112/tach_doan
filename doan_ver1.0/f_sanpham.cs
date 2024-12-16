@@ -268,17 +268,17 @@ namespace doan_ver1._0
                 dataHangTon.DataSource = LoadHangTonKho();
                 dataHangTon.DefaultCellStyle.ForeColor = Color.Black;
 
-                Color commonColor = ColorTranslator.FromHtml("#3498DB"); // Xanh dương
-                Color hoverColor = ColorTranslator.FromHtml("#2980B9"); // Xanh dương đậm hơn
+                Color commonColor = ColorTranslator.FromHtml("#3498DB"); 
+                Color hoverColor = ColorTranslator.FromHtml("#2980B9"); 
 
-            Button[] buttons = { btnThem_Sp, btnXoa_Sp, btnCapNhat, btnLamMoi_Sp, btn_TK_timKiem, btn_TK_LamMoi };
+            Button[] buttons = { btnThem_Sp, btnXoa_Sp, btnCapNhat, btnLamMoi_Sp, btn_TK_timKiem, btn_TK_LamMoi,btnXuat };
 
             foreach (Button btn in buttons)
             {
                 btn.BackColor = commonColor;
                 btn.ForeColor = Color.White; 
                 btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderSize = 2;
                 btn.FlatAppearance.MouseOverBackColor = hoverColor; 
                 btn.Cursor = Cursors.Hand; 
             }
@@ -328,6 +328,8 @@ namespace doan_ver1._0
             txt_TK_MaSP.Clear();
              txt_TK_Ten.Clear();
               cmb_TK_DanhMuc.SelectedIndex = -1;
+
+            data_GV_timKiem.DataSource = loaddl_SanPham();
         }
 
         private void data_GV_timKiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -498,6 +500,11 @@ namespace doan_ver1._0
 
         }
 
-        
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            string baoCao = txtMa_sp.Text;
+            form_thongtinSP_Report report = new form_thongtinSP_Report(baoCao);
+            report.Show();
+        }
     }
 }

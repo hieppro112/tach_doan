@@ -160,7 +160,7 @@ namespace doan_ver1._0
 
         private void FormDangKy_Load_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -170,7 +170,41 @@ namespace doan_ver1._0
             txtHoTen.Clear();
             txtEmail.Clear();
             dateNgayTao.Value = DateTime.Now;
-            cbVaitro.SelectedIndex = 0;
+            cbVaitro.SelectedIndex = -1;
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            form_login login = new form_login();
+            login.Show();
+            this.Close();
+        }
+
+        private void btnDangKy_MouseEnter(object sender, EventArgs e)
+        {
+            btnDangKy.BackColor = Color.Red;
+        }
+
+        private void btnDangKy_MouseLeave(object sender, EventArgs e)
+        {
+            btnDangKy.BackColor = Color.DarkBlue;
+        }
+
+        private void btnLamMoi_MouseEnter(object sender, EventArgs e)
+        {
+            btnLamMoi.BackColor = Color.Red;
+            btnLamMoi.ForeColor = Color.White;
+        }
+
+        private void btnLamMoi_MouseLeave(object sender, EventArgs e)
+        {
+            btnLamMoi.BackColor = Color.White;
+            btnLamMoi.ForeColor = Color.DarkBlue;
         }
     }
 }

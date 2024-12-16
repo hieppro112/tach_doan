@@ -14,7 +14,7 @@ namespace doan_ver1._0
 {
     public partial class form_login : Form
     {
-       // SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
+        //SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
         SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
 
         public form_login()
@@ -98,6 +98,7 @@ namespace doan_ver1._0
 
         private void btn_login_admin_Click(object sender, EventArgs e)
         {
+           
             login();
             
         }
@@ -105,6 +106,28 @@ namespace doan_ver1._0
         private void form_login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormDangKy formDangKy = new FormDangKy();
+            formDangKy.Show();
+            this.Hide();
+        }
+
+        private void btn_login_admin_MouseEnter(object sender, EventArgs e)
+        {
+            btn_login_admin.BackColor = Color.Red;
+        }
+
+        private void btn_login_admin_MouseLeave(object sender, EventArgs e)
+        {
+            btn_login_admin.BackColor = Color.DarkBlue;
         }
     }
 }

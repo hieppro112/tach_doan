@@ -232,7 +232,7 @@
             // 
             // pictureBox2
             // 
-
+            this.pictureBox2.Image = global::doan_ver1._0.Properties.Resources.image_no_bg;
             this.pictureBox2.Location = new System.Drawing.Point(-10, -8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(152, 84);
@@ -243,7 +243,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            
+            this.pictureBox1.Image = global::doan_ver1._0.Properties.Resources._0af3c9613761d2d2394d99312aeba397;
             this.pictureBox1.Location = new System.Drawing.Point(346, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(311, 165);

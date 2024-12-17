@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.thua = new System.Windows.Forms.TabPage();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dateNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -82,7 +83,6 @@
             this.BaoCaoSP2 = new doan_ver1._0.BaoCaoSP();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.BaoCaoSP1 = new doan_ver1._0.BaoCaoSP();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.thua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_sanPham)).BeginInit();
@@ -140,6 +140,20 @@
             this.thua.TabIndex = 0;
             this.thua.Text = "Quản Lý Sản Phẩm";
             this.thua.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnXuat.Location = new System.Drawing.Point(916, 165);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(158, 59);
+            this.btnXuat.TabIndex = 38;
+            this.btnXuat.Text = "XUẤT";
+            this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnCapNhat
             // 
@@ -336,11 +350,11 @@
             this.dataGV_sanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGV_sanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGV_sanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGV_sanPham.Location = new System.Drawing.Point(3, 197);
+            this.dataGV_sanPham.Location = new System.Drawing.Point(3, 203);
             this.dataGV_sanPham.Name = "dataGV_sanPham";
             this.dataGV_sanPham.RowHeadersWidth = 51;
             this.dataGV_sanPham.RowTemplate.Height = 24;
-            this.dataGV_sanPham.Size = new System.Drawing.Size(1175, 234);
+            this.dataGV_sanPham.Size = new System.Drawing.Size(1175, 228);
             this.dataGV_sanPham.TabIndex = 18;
             this.dataGV_sanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_sanPham_CellContentClick);
             this.dataGV_sanPham.Click += new System.EventHandler(this.dataGV_sanPham_Click);
@@ -348,9 +362,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.SteelBlue;
+            this.tabPage2.Controls.Add(this.btn_TK_timKiem);
             this.tabPage2.Controls.Add(this.btn_TK_LamMoi);
             this.tabPage2.Controls.Add(this.data_GV_timKiem);
-            this.tabPage2.Controls.Add(this.btn_TK_timKiem);
             this.tabPage2.Controls.Add(this.cmb_TK_DanhMuc);
             this.tabPage2.Controls.Add(this.txt_TK_Ten);
             this.tabPage2.Controls.Add(this.txt_TK_MaSP);
@@ -689,20 +703,6 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // btnXuat
-            // 
-            this.btnXuat.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuat.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnXuat.Location = new System.Drawing.Point(916, 165);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(158, 59);
-            this.btnXuat.TabIndex = 38;
-            this.btnXuat.Text = "XUẤT";
-            this.btnXuat.UseVisualStyleBackColor = false;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // f_sanpham
             // 

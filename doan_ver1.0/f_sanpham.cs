@@ -120,7 +120,11 @@ namespace doan_ver1._0
             {
                 if(sql.Number == 2627)
                 {
-                    MessageBox.Show("Mã sản phẩm đã tồn tại !", "Thêm thất bại");
+                    MessageBox.Show("Mã sản phẩm đã tồn tại, mã sản phẩm phải khác với mã đã có !", "Thêm thất bại");
+                }
+                else
+                {
+                    MessageBox.Show(sql.Number.ToString());
                 }
             }
             catch (Exception ex)
@@ -307,6 +311,10 @@ namespace doan_ver1._0
                txt_TK_MaSP.Enabled = rad_TK_Ma.Checked;
                txt_TK_Ten.Enabled = false;
                cmb_TK_DanhMuc.Enabled = false;
+
+            txt_TK_MaSP.Text = "";
+            txt_TK_Ten.Text = "";
+            cmb_TK_DanhMuc.SelectedIndex = 0;
         }
 
         private void rad_TK_Ten_CheckedChanged(object sender, EventArgs e)
@@ -314,6 +322,10 @@ namespace doan_ver1._0
             txt_TK_Ten.Enabled = rad_TK_Ten.Checked;
               txt_TK_MaSP.Enabled = false;
                cmb_TK_DanhMuc.Enabled = false;
+
+            txt_TK_MaSP.Text = "";
+            txt_TK_Ten.Text = "";
+            cmb_TK_DanhMuc.SelectedIndex = 0;
         }
 
         private void rad_TK_DanhMuc_CheckedChanged(object sender, EventArgs e)
@@ -321,6 +333,10 @@ namespace doan_ver1._0
             cmb_TK_DanhMuc.Enabled = rad_TK_DanhMuc.Checked;
               txt_TK_MaSP.Enabled = false;
              txt_TK_Ten.Enabled = false;
+
+            txt_TK_MaSP.Text = "";
+            txt_TK_Ten.Text = "";
+            cmb_TK_DanhMuc.SelectedIndex = 0;
         }
 
         private void btn_TK_LamMoi_Click(object sender, EventArgs e)

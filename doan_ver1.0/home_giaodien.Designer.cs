@@ -68,6 +68,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txt_seach_nhanvien = new System.Windows.Forms.TextBox();
             this.tab_report_nhanvien = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.InNhanVien1 = new doan_ver1._0.InNhanVien();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.app_logout = new System.Windows.Forms.Panel();
@@ -85,8 +87,6 @@
             this.app_account = new System.Windows.Forms.Panel();
             this.pic_account = new System.Windows.Forms.PictureBox();
             this.txt_account = new System.Windows.Forms.Label();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.InNhanVien1 = new doan_ver1._0.InNhanVien();
             this.control_HDxuat.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_seach_HDxuat)).BeginInit();
@@ -581,6 +581,18 @@
             this.tab_report_nhanvien.Text = "Báo cáo";
             this.tab_report_nhanvien.UseVisualStyleBackColor = true;
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 2);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.InNhanVien1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1255, 545);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
             // panel_main
             // 
             this.panel_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -813,18 +825,6 @@
             this.txt_account.MouseEnter += new System.EventHandler(this.app_account_MouseEnter);
             this.txt_account.MouseLeave += new System.EventHandler(this.app_account_MouseLeave);
             // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 2);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.InNhanVien1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1255, 545);
-            this.crystalReportViewer1.TabIndex = 0;
-            // 
             // home_giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -840,7 +840,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home_giaodien";
-            this.Text = "uo";
+            this.Text = "Giao dien";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.home_giaodien_FormClosing_1);
             this.Load += new System.EventHandler(this.home_giaodien_Load);
             this.Resize += new System.EventHandler(this.home_giaodien_Resize);

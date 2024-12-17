@@ -245,7 +245,7 @@ namespace doan_ver1._0
                 }
                 else if (!string.IsNullOrWhiteSpace(txtTimtheoten.Text))
                 {
-                    cmd.CommandText = "seach_TenCH";
+                    cmd.CommandText = "[dbo].[seach_TenCH]";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@tenCuaHang", txtTimtheoten.Text);
                 }

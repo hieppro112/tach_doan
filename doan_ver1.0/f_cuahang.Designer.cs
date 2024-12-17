@@ -122,12 +122,12 @@
             this.dgvCuaHang1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCuaHang1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCuaHang1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvCuaHang1.Location = new System.Drawing.Point(3, 126);
+            this.dgvCuaHang1.Location = new System.Drawing.Point(3, 175);
             this.dgvCuaHang1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvCuaHang1.Name = "dgvCuaHang1";
             this.dgvCuaHang1.RowHeadersWidth = 51;
             this.dgvCuaHang1.RowTemplate.Height = 24;
-            this.dgvCuaHang1.Size = new System.Drawing.Size(1098, 284);
+            this.dgvCuaHang1.Size = new System.Drawing.Size(1098, 235);
             this.dgvCuaHang1.TabIndex = 30;
             this.dgvCuaHang1.Click += new System.EventHandler(this.dgvCuaHang1_Click);
             // 

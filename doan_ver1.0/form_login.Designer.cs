@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_login));
             this.txt_Pass_admin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_user_admin = new System.Windows.Forms.TextBox();
             this.btn_login_admin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,26 +104,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Tên đăng nhập";
             // 
-            // pictureBox2
-            // 
-
-            this.pictureBox2.Location = new System.Drawing.Point(-7, -10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(152, 84);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            
-            this.pictureBox1.Location = new System.Drawing.Point(229, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(311, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -145,6 +126,26 @@
             this.label2.Size = new System.Drawing.Size(193, 37);
             this.label2.TabIndex = 16;
             this.label2.Text = "ĐĂNG NHẬP";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::doan_ver1._0.Properties.Resources.image_removebg_preview__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(-7, -10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(152, 84);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(229, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(311, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // form_login
             // 

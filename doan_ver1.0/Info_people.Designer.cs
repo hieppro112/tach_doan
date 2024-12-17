@@ -65,6 +65,7 @@
             this.cb_matk.Name = "cb_matk";
             this.cb_matk.Size = new System.Drawing.Size(145, 28);
             this.cb_matk.TabIndex = 1;
+           
             // 
             // cb_user
             // 
@@ -215,7 +216,7 @@
             this.btn_report_people.TabIndex = 14;
             this.btn_report_people.Text = "In";
             this.btn_report_people.UseVisualStyleBackColor = true;
-            this.btn_report_people.Click += new System.EventHandler(this.btn_thoat_Click);
+            this.btn_report_people.Click += new System.EventHandler(this.btn_report_people_Click);
             // 
             // Info_people
             // 

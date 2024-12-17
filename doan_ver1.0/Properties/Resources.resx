@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="image-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="feature" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="outdoor-unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outdoor-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,11 +136,14 @@
   <data name="online-shopping" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\online-shopping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image_no_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_no_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OIP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot 2024-11-27 213933" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2024-11-27 213933.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="store" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,10 +151,10 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot 2024-11-27 213933" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2024-11-27 213933.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="find" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0af3c9613761d2d2394d99312aeba397" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0af3c9613761d2d2394d99312aeba397.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

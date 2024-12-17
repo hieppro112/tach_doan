@@ -63,7 +63,7 @@ as
 select * from TaiKhoan 
 where MaTaiKhoan = @maTK
 
-
+seach_TenCH
 
 create proc seach_name(@name nvarchar(100))
 as
@@ -134,6 +134,41 @@ exec tp_SuaTaiKhoan 'dongpham','456','Pham Dinh Phuong','23211TT3228@mail.tdc.ed
 		DanhMuc nvarchar(100)
 	);
 
+	create table SanPham(
+		MaNhapHang INT IDENTITY(1,1) PRIMARY KEY, 
+		MaSanPham nvarchar(50) not null,
+		TenSanPham NVARCHAR(50) NOT NULL UNIQUE,
+		NgayNhap DATETIME DEFAULT GETDATE(),
+		SoLuong int not null,
+		DonGia decimal(18,2) not null,
+		ThanhTien decimal(18,2) not null,
+		DanhMuc nvarchar(100)
+	);
+
+	GO
+CREATE TABLE [dbo].[SanPham](
+	[MaNhapHang] [int] IDENTITY(1,1) NOT NULL,
+	[MaSanPham] [nvarchar](50) NOT NULL,
+	[TenSanPham] [nvarchar](50) NOT NULL,
+	[NgayNhap] [datetime] NOT NULL,
+	[SoLuong] [int] NOT NULL,
+	[DonGia] [decimal](18, 2) NOT NULL,
+	[ThanhTien] [decimal](18, 2) NOT NULL,
+	[DanhMuc] [nvarchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MaNhapHang] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[MaSanPham] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+	drop table SanPham
+
 	
 INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
 VALUES 
@@ -159,10 +194,11 @@ from CuaHang
 
 exec tp_xem_cuahang
 
-
-CREATE PROC tp_ThemSanPham
+GO
+CREATE PROC [dbo].[tp_ThemSanPham]
     @MaSanPham NVARCHAR(50),
     @TenSanPham NVARCHAR(50), 
+    @NgayNhap DATETIME,  -- Thêm dấu phẩy ở đây
     @SoLuong INT,
     @DonGia DECIMAL(18, 2),
     @ThanhTien DECIMAL(18, 2),
@@ -170,11 +206,43 @@ CREATE PROC tp_ThemSanPham
 AS
 BEGIN
     -- Chèn dữ liệu vào bảng SanPham
-    INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
-    VALUES (@MaSanPham, @TenSanPham,  @SoLuong, @DonGia, @ThanhTien, @DanhMuc);
+    INSERT INTO SanPham (MaSanPham, TenSanPham, NgayNhap, SoLuong, DonGia, ThanhTien, DanhMuc)
+    VALUES (@MaSanPham, @TenSanPham, @NgayNhap, @SoLuong, @DonGia, @ThanhTien, @DanhMuc);
 END;
+GO
 
-exec tp_ThemSanPham
+drop proc tp_ThemSanPham
+
+
+
+GO
+CREATE PROCEDURE [dbo].[tp_CapNhat]
+    @MaSanPham NVARCHAR(50),
+    @TenSanPham NVARCHAR(50), 
+    @SoLuong INT,
+    @DonGia DECIMAL(18, 2),
+    @ThanhTien DECIMAL(18, 2),
+    @DanhMuc NVARCHAR(100),
+    @NgayNhap DATETIME  -- Thêm tham số Ngày Nhập
+AS
+BEGIN
+    UPDATE SanPham
+    SET 
+        TenSanPham = @TenSanPham,
+        SoLuong = @SoLuong,
+        DonGia = @DonGia,
+        ThanhTien = @ThanhTien,
+        DanhMuc = @DanhMuc,
+        NgayNhap = @NgayNhap  -- Cập nhật Ngày Nhập thay vì Ngày Sinh
+    WHERE MaSanPham = @MaSanPham;
+END;
+GO
+
+
+
+drop proc tp_SuaSanPham
+
+exec tp_ThemSanPham'sp123','ti vi samsung','20','1250000','20000123.00','điện lạnh'
 create proc tp_XoaSanPham(@MaSanPham nvarchar(50))
 as
 begin
@@ -226,6 +294,7 @@ select * from SanPham
 where TenSanPham like '%' + @tenSanPham +'%';
 end;
 
+exec sp_timKiem_TenSP 'tivi'
 
 
 --ket thuc phan san pham cua thuan
@@ -277,6 +346,8 @@ end;
 	as
 	select * from CuaHang 
 	where DiaChi  = @diaChi
+
+	exec [dbo].[seach_DiaChi]'binh chieu'
 	GO
 	--seach ma cua hang
 	create proc [dbo].[seach_MACH](@maCuaHang int)
@@ -291,7 +362,7 @@ end;
 	select * from CuaHang 
 	where TenCuaHang  = @tenCuaHang
 	GO
-	--
+	
 
 
 	-- sql hóa đơn xuất
@@ -394,6 +465,8 @@ END;
 	exec xoa_HDxuat 'hd1'
 	exec them_HDxuat 'hd2','SP002','1','4','12','2/5/2024'
 	select * from HDXuatHang
+
+	drop table HDXuatHang
 
 	
 

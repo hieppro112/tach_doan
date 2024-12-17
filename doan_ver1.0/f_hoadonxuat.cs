@@ -58,7 +58,15 @@ namespace doan_ver1._0
         }
         private void btnThem_hdxuat_Click(object sender, EventArgs e)
         {
-            updatesp();
+            if (updatesp() == true)
+            {
+                them_HD();
+            }
+            else
+            {
+                MessageBox.Show("so luong khong du");
+            }
+            //updatesp();
             //them_HD();
             dgv_HDxuat.DataSource = loaddl_HDxuat();
         }
@@ -66,6 +74,8 @@ namespace doan_ver1._0
         {
             try
             {
+
+
                 if(connect.State == System.Data.ConnectionState.Closed)
                 {
                     connect.Open();
@@ -90,6 +100,7 @@ namespace doan_ver1._0
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("them thanh cong ");
+
                 }
                 else
                 {
@@ -123,6 +134,8 @@ namespace doan_ver1._0
                     connect.Close();
                 }
             }
+
+            dgv_HDxuat.DataSource = loaddl_HDxuat();
         }
 
         private void dgv_HDxuat_Click(object sender, EventArgs e)
@@ -360,7 +373,7 @@ namespace doan_ver1._0
         {
 
         }
-        private void updatesp()
+        private Boolean updatesp()
         {
             try
             {
@@ -379,11 +392,13 @@ namespace doan_ver1._0
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  // MessageBox.Show("Thêm HD thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
                 }
                 else
                 {
                     MessageBox.Show("Không đủ số lượng để bán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -395,6 +410,7 @@ namespace doan_ver1._0
                 connect?.Close();
             }
             dgv_HDxuat.DataSource = loaddl_HDxuat();
+            return false;
         }
 
         private void btn_report_HDxuat_Click(object sender, EventArgs e)

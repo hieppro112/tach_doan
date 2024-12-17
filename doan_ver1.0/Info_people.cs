@@ -16,7 +16,7 @@ namespace doan_ver1._0
         //SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
         SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
         //SqlConnection connect1 = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
-
+        //SqlConnection connect = new SqlConnection("Data Source=LAPTOP-BA92BEJG\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
 
         public Info_people(List<String> info)
         {
@@ -134,7 +134,16 @@ namespace doan_ver1._0
             {
                 this.Close();
             }
-
+            
         }
+
+        private void btn_report_people_Click(object sender, EventArgs e)
+        {
+            string maTaiKhoan = cb_user.Text;
+            inthongtin info = new inthongtin(maTaiKhoan);
+            info.Show();
+        }
+
+       
     }
 }
